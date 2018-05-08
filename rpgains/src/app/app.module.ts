@@ -7,6 +7,8 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { LootComponent } from './loot/loot.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { InventoryComponent } from './inventory/inventory.component';
     AppComponent,
     HomepageComponent,
     DashboardComponent,
-    InventoryComponent
+    InventoryComponent,
+    LootComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

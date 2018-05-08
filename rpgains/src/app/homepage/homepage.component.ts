@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+  }
+
+  logout(): void {
+    localStorage.removeItem('session');
+    localStorage.removeItem('loggedUser');
+    localStorage.removeItem('userName');
+  }
+
+
 
   ngOnInit() {
+    if (localStorage.session == 'logged') {
+      document.getElementById('logged').innerHTML = "<button (click)='logout()'>Log out</button>"
+    }
   }
 
 }
