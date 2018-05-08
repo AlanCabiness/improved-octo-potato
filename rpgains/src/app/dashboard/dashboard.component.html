@@ -11,24 +11,24 @@
 <body>
 <nav class="navbar">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="http://www.ign.com/"><img class="rpgLogo" src="../assets/rpgLogo2.png" alt="RPGains"></a>
+    <div class="navbar-left">
+      <a routerLink="/homepage"><img class="rpgLogo" src="../assets/rpgLogo2.png" alt="RPGains"></a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="nav navbar-expand-lg" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
-      <ul id="colors" class="nav navbar-nav navbar-right">
-        <li><a href="#">Track</a></li>
-        <li><a href="#">Customize</a></li>
-        <li><a href="#">Loot</a></li>
+      <ul id="pages" class="nav navbar-nav navbar-right">
+        <li><a routerLink="/tracking">Track</a></li>
+        <li><a routerLink="/inventory">Customize</a></li>
+        <li><a routerLink="/loot">Loot</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="container-fluid text-left">
-  <div class="row content">
+  <div class="row content1">
     <div class="col-sm-2 sidenavL">
       <p>Weight</p>
       <p>Calorie Intake</p>
@@ -63,16 +63,17 @@
 </div>
 
 <div class="container-fluid">
-  <div class="row content">
+  <div class="row content2">
     <div class="col-sm-1">
     </div>
     <div class="col-sm-10 progress">
-      Level Up: 34
       <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="70"
            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+        70%
       </div>
     </div>
     <div class="col-sm-1">
+      Level Up: 34
     </div>
   </div>
 </div>

@@ -5,22 +5,35 @@
 -GRAY (#9D8D8F)
 -BROWN (#9B786F)
  */
-
+html{
+  background-color: #5a5560;
+}
 body{
   background-color: #5a5560;
+  height: 100%;
   color: white;
-}
-#playerPicture{
-  padding-top: 70px;
-}
+  font-family: 'Oswald', sans-serif;
 
-img.stagePic{
-  height: 100px;
-  width: 300px;
 }
 
 a {
   color:whitesmoke;
+}
+
+.navbar{
+  padding-top: 45px;
+  padding-left: 20px;
+  border-radius: 0;
+  vertical-align:middle;
+  height: 75px;
+
+}
+body::before{
+  content: " ";
+}
+
+body::after{
+  content: none;
 }
 
 .rpgLogo{
@@ -28,11 +41,48 @@ a {
   padding: 10px;
 }
 
-.navbar {
-  padding-top: 45px;
-  padding-left: 20px;
-  border-radius: 0;
-  vertical-align:middle;
+.container .row:before,
+.container .row:after {
+  content: none;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content1 {
+  padding-top: 50px;
+}
+
+.row.content2 {
+  padding-top: 50px;
+  padding-bottom: 45px;
+}
+
+/* Set gray background color and 100% height */
+.sidenavL {
+  padding-top: 15px;
+  background-color: #46344E;
+  color: whitesmoke;
+  border-style: solid;
+  border-color: whitesmoke;
+  height: 100%;
+}
+
+.sidenavR {
+  padding-top: 20px;
+  background-color: #5A5560;
+  color: gray;
+}
+
+.well{
+  height: 175px;
+  width: 175px;
+}
+
+#playerPicture{
+  padding-top: 70px;
+}
+
+img.stagePic{
+  height: 100px;
+  width: 300px;
 }
 .progress{
   height: 70px;
@@ -46,32 +96,6 @@ a {
   vertical-align:middle;
 }
 
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {
-  padding-top: 50px;
-  height: 140px;
-
-}
-
-/* Set gray background color and 100% height */
-.sidenavL {
-  padding-top: 15px;
-  background-color: #46344E;
-  color: whitesmoke;
-  border-style: solid;
-  border-color: whitesmoke;
-}
-
-.sidenavR {
-  padding-top: 20px;
-  background-color: #5A5560;
-  color: gray;
-}
-
-.well{
-  height: 175px;
-  width: 175px;
-}
 /* Set black background color, white text and some padding */
 footer {
   background-color: #555;

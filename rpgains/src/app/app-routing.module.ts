@@ -5,13 +5,18 @@ import {HomepageComponent} from "./homepage/homepage.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {InventoryComponent} from "./inventory/inventory.component";
 import {LoginComponent} from "./login/login.component";
+import {LootComponent} from "./loot/loot.component";
+import {TrackingComponent} from "./tracking/tracking.component";
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/homepage', pathMatch: 'full'},
   {path: 'homepage', component: HomepageComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'inventory', component: InventoryComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'loot', component: LootComponent},
+  {path: 'tracking', component: TrackingComponent}
 ];
 
 @NgModule({
