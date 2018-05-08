@@ -51,6 +51,7 @@ h3 {
   text-align: center;
   color: #000;
   z-index: 1;
+  opacity: 1;
 }
 
 .caption span.border {
@@ -59,6 +60,7 @@ h3 {
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+
 }
 
 .caption .heading {
@@ -67,6 +69,7 @@ h3 {
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+  opacity: 1;
 }
 
 h3 {
@@ -138,3 +141,6 @@ h3 {
     background-attachment: scroll;
   }
 }
+
+
+
