@@ -16,7 +16,7 @@ export class TrackingComponent implements OnInit {
 
   submitted = false;
 
-  MongoClient = require('mongodb').MongoClient;
+  /*MongoClient = require('mongodb').MongoClient;
   url = 'mongodb://207.229.181.23:27017/rpgains';
 
   onSubmit() {
@@ -27,7 +27,7 @@ export class TrackingComponent implements OnInit {
         console.log(doc);
       });
     });
-  }
+  }*/
 
   ngOnInit() {
   }
