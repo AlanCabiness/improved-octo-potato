@@ -8,41 +8,70 @@
 
 body{
   background-color: #5a5560;
+  color: white;
+}
+#playerPicture{
+  padding-top: 70px;
+}
+
+img.stagePic{
+  height: 100px;
+  width: 300px;
+}
+
+a {
+  color:whitesmoke;
 }
 
 .rpgLogo{
   height: 75px;
-  width: 120px;
   padding: 10px;
 }
 
 .navbar {
+  padding-top: 45px;
+  padding-left: 20px;
   border-radius: 0;
   vertical-align:middle;
-
-
 }
-
-.test {
-  background-color: bisque;
-  height: 100px;
+.progress{
+  height: 70px;
+  margin: 0;
+  vertical-align:middle;
+  text-align: right;
+  background-color: #46344E;
+}
+.progress-bar{
+  /*background-color: #FAED26;*/
+  vertical-align:middle;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {height: 450px}
+.row.content {
+  padding-top: 50px;
+  height: 140px;
+
+}
 
 /* Set gray background color and 100% height */
 .sidenavL {
-  padding-top: 20px;
-  background-color: #f1f1f1;
+  padding-top: 15px;
+  background-color: #46344E;
+  color: whitesmoke;
+  border-style: solid;
+  border-color: whitesmoke;
 }
 
 .sidenavR {
   padding-top: 20px;
-  padding-right: 20px;
-  background-color: #f1f1f1;
+  background-color: #5A5560;
+  color: gray;
 }
 
+.well{
+  height: 175px;
+  width: 175px;
+}
 /* Set black background color, white text and some padding */
 footer {
   background-color: #555;

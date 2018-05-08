@@ -1,4 +1,12 @@
+.test1{
+  height: 300px;
+  background-color: blue;
+}
 
+.test2{
+  height: 300px;
+  background-color: red;
+}
 .page-section {
   margin-top: 5rem;
   margin-bottom: 5rem;
