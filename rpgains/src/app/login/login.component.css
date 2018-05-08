@@ -1,7 +1,23 @@
+
+body{
+  background-color: #46344E;
+}
+
+.row{
+  background-color: #46344E;
+  color: #000000;
+  margin: 0;
+
+}
+.container{
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+
 .test1{
   height: 300px;
   background-color: blue;
-}
+
 
 .test2{
   height: 300px;
@@ -20,6 +36,7 @@
   display: block;
   font-size: 1rem;
   font-weight: 800;
+  font-family: 'Oswald', sans-serif;
 }
 
 .section-heading .section-heading-lower {
@@ -29,7 +46,6 @@
 }
 
 .cta {
-  padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #46344E;
   width: 50%;
@@ -63,13 +79,13 @@
 }
 
 .btn-primary {
-  background-color: #05726c;
-  border-color: #05726c;
+  background-color: #46344E;
+  border-color: #46344E;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #0c2940;
-  border-color: #0c2940;
+  background-color: #5a5560;
+  border-color: #5a5560;
 }
 
 .form-style-5 {
@@ -79,7 +95,7 @@
   margin: 10px auto;
   padding: 20px;
   border-radius: 8px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .form-style-5 fieldset {
@@ -108,7 +124,7 @@
 .form-style-5 input[type="url"],
 .form-style-5 textarea,
 .form-style-5 select {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Oswald', sans-serif;
   background: rgba(255, 255, 255, .1);
   border: none;
   border-radius: 4px;
@@ -169,19 +185,19 @@
   padding: 19px 39px 18px 39px;
   color: #FFF;
   margin: 0 auto;
-  background: #05726c;
+  background: #46344E;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   width: 100%;
-  border: 1px solid #05726c;
+  border: 1px solid #46344E;
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
 }
 
 .form-style-5 input[type="submit"]:hover,
 .form-style-5 input[type="button"]:hover {
-  background: #0c2940;
+  background: #5a5560;
 }
 
 
