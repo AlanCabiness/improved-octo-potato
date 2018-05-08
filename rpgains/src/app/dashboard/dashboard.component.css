@@ -9,6 +9,7 @@
 body{
   background-color: #5a5560;
   color: white;
+  padding-top: 0;
 }
 #playerPicture{
   padding-top: 70px;
