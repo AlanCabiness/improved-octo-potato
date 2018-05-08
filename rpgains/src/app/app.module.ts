@@ -6,13 +6,15 @@ import {AppComponent} from './app.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import { LootComponent } from './loot/loot.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    DashboardComponent
+    DashboardComponent,
+    LootComponent
   ],
   imports: [
     BrowserModule,
