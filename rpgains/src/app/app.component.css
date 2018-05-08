@@ -1,4 +1,11 @@
-
-
-
+#navbar {
+  overflow: hidden;
+  /*background-color: #46344E;*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
 
