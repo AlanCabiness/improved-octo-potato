@@ -24,7 +24,7 @@ import { TrackingComponent } from './tracking/tracking.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

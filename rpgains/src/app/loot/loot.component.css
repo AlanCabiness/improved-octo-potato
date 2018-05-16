@@ -1,0 +1,20 @@
+html{
+  background-color: #5a5560;
+}
+body{
+  background-color: #5a5560;
+  height: 100%;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+a {}
+
+#lootButton{
+  color: black;
+}
+
+#lootPicture{
+  padding-top: 70px;
+}
