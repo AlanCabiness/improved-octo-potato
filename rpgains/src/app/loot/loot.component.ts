@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Helmet } from '../Helmet';
 import { Armor } from '../Armor';
 import { Weapon } from '../Weapon';
+import { Token } from '../Token';
 import { HelmetList, ArmorList, WeaponList } from '../LootTable';
 
 @Component({
@@ -13,6 +14,7 @@ export class LootComponent implements OnInit {
   helmet = new Helmet();
   armor = new Armor();
   weapon = new Weapon();
+  tokens: Token = {count: 5};
   clickMessage = '';
   loot = 0;
   loottype = 0;
@@ -34,6 +36,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i < ArmorList.length; i++) {
         if (ArmorList[i].id === 8) {
           this.armor = ArmorList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.armor;
         }
       }
@@ -42,6 +45,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= ArmorList.length; i++) {
         if (ArmorList[i].id === 7) {
           this.armor = ArmorList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.armor;
         }
       }
@@ -50,6 +54,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= ArmorList.length; i++) {
         if (ArmorList[i].id === 6) {
           this.armor = ArmorList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.armor;
         }
       }
@@ -58,6 +63,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= ArmorList.length; i++) {
         if (ArmorList[i].id === 5) {
           this.armor = ArmorList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.armor;
         }
       }
@@ -70,6 +76,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i < HelmetList.length; i++) {
         if (HelmetList[i].id === 4) {
           this.helmet = HelmetList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.helmet;
         }
       }
@@ -78,6 +85,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= HelmetList.length; i++) {
         if (HelmetList[i].id === 3) {
           this.helmet = HelmetList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.helmet;
         }
       }
@@ -86,6 +94,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= HelmetList.length; i++) {
         if (HelmetList[i].id === 2) {
           this.helmet = HelmetList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.helmet;
         }
       }
@@ -94,6 +103,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= HelmetList.length; i++) {
         if (HelmetList[i].id === 1) {
           this.helmet = HelmetList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.helmet;
         }
       }
@@ -105,6 +115,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i < WeaponList.length; i++) {
         if (WeaponList[i].id === 12) {
           this.weapon = WeaponList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.weapon;
         }
       }
@@ -113,6 +124,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= WeaponList.length; i++) {
         if (WeaponList[i].id === 11) {
           this.weapon = WeaponList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.weapon;
         }
       }
@@ -121,6 +133,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= WeaponList.length; i++) {
         if (WeaponList[i].id === 10) {
           this.weapon = WeaponList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.weapon;
         }
       }
@@ -129,6 +142,7 @@ export class LootComponent implements OnInit {
       for (let i = 0; i <= WeaponList.length; i++) {
         if (WeaponList[i].id === 9) {
           this.weapon = WeaponList[i];
+          this.tokens.count = this.tokens.count - 1;
           return this.weapon;
         }
       }
