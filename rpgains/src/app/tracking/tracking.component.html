@@ -6,6 +6,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
 </head>
 <nav id="navbar">
   <img src="../assets/rpgLogo2.png" height="75" routerLink="/homepage"/>
@@ -18,18 +19,31 @@
   }
 </script>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <form>
-          <div class="form-group">
-            <label for="weight">Weight</label>
-          </div>
-        </form>
-      </div>
-      <div class="col-sm-6">
-        Column 2
-      </div>
+<div class="container">
+  <h1>Tracking Form</h1>
+  <form #trackingForm="ngForm">
+    {{diagnostic}}
+    <div class="form-group">
+      <label for="weight">Weight</label>
+      <input type="text" class="form-control" id="weight" required [(ngModel)]="model.weight" name="weight">
     </div>
-  </div>
+    <div class="form-group">
+      <label for="bench">Bench wt.</label>
+      <input type="text" class="form-control" id="bench" required [(ngModel)]="model.bench" name="bench">
+    </div>
+    <div class="form-group">
+      <label for="squat">Squat wt.</label>
+      <input type="text" class="form-control" id="squat" required [(ngModel)]="model.squat" name="squat">
+    </div>
+    <div class="form-group">
+      <label for="curl">Curl wt.</label>
+      <input type="text" class="form-control" id="curl" required [(ngModel)]="model.curl" name="curl">
+    </div>
+    <div class="form-group">
+      <label for="calories">Calorie Intake</label>
+      <input type="text" class="form-control" id="calories" required [(ngModel)]="model.calories" name="calries">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
 </body>

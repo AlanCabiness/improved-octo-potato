@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
+import {RouterModule, Routes} from '@angular/router';
 
-import {HomepageComponent} from "./homepage/homepage.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {InventoryComponent} from "./inventory/inventory.component";
-import {LoginComponent} from "./login/login.component";
-import {LootComponent} from "./loot/loot.component";
-import {TrackingComponent} from "./tracking/tracking.component";
+import {HomepageComponent} from './homepage/homepage.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {InventoryComponent} from './inventory/inventory.component';
+import {LoginComponent} from './login/login.component';
+import {LootComponent} from './loot/loot.component';
+import {TrackingComponent} from './tracking/tracking.component';
 
 
 const routes: Routes = [
