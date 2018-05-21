@@ -10,6 +10,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { LootComponent } from './loot/loot.component';
 import { LoginComponent } from './login/login.component';
 import { TrackingComponent } from './tracking/tracking.component';
+import { CustomizationComponent } from './customization/customization.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { TrackingComponent } from './tracking/tracking.component';
     LootComponent,
     LoginComponent,
     TrackingComponent,
+    CustomizationComponent,
   ],
   imports: [
     BrowserModule,

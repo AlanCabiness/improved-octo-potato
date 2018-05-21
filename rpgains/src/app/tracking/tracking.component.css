@@ -1,0 +1,101 @@
+@import "../../styles.css";
+
+body{
+  position: relative;
+  height: 1000px;
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+#side{
+  height: 1000px;
+}
+
+.gains{
+  height: 200px;
+  background-color: #faed26;
+  font-size: 10px;
+}
+
+.gains:hover{
+  -moz-box-shadow: 0 0 30px #3D424B;
+  -webkit-box-shadow: 0 0 30px #3D424B;
+  box-shadow: 0 0 30px #9D8D8F;
+}
+
+#one{
+  /*background-color: red;*/
+  height: 1000px;
+  overflow: scroll;
+}
+
+#two{
+  /*background-color: green;*/
+  height: 256px;
+}
+#three{
+  /*background-color: cyan;*/
+  height: 256px;
+}
+
+.graph{
+  /*background-image: url("../../assets/helmetStock.png");*/
+  height: 600px;
+  background-color: red;
+}
+.img-thumbnail:hover {
+  -moz-box-shadow: 0 0 50px #3D424B;
+  -webkit-box-shadow: 0 0 50px #3D424B;
+  box-shadow: 0 0 50px #9D8D8F;
+}
+
+.row2{
+  background-image: url("../../assets/helmetStock.png");
+  height: 200px;
+}
+
+.row2:hover {
+  -moz-box-shadow: 0 0 30px #3D424B;
+  -webkit-box-shadow: 0 0 30px #3D424B;
+  box-shadow: 0 0 30px #9D8D8F;
+}
+
+.row3{
+  background-image: url("../../assets/helmetStock.png");
+  height: 200px;
+}
+.row3:hover {
+  -moz-box-shadow: 0 0 50px #3D424B;
+  -webkit-box-shadow: 0 0 50px #3D424B;
+  box-shadow: 0 0 50px #9D8D8F;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #9D8D8F;
+  height: 870px;
+}
+
+.sidenavL{
+  height: 600px;
+}
+
+.right{
+  background-color: #46344E;
+}
+#playerPicture{
+  padding-top: 200px;
+  padding-left: 200px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+
+  .row.content {
+    height: auto;
+  }
+}
