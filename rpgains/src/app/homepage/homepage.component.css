@@ -21,25 +21,25 @@ h3 {
 }
 
 .bgimg-1 {
-  background-image: url("../../assets/para1.png");
+  background-image: url("../../assets/homepage/para1.png");
   min-height: 100%;
   width: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("../../assets/para2.png");
+  background-image: url("../../assets/homepage/para2.png");
   min-height: 400px;
   width: 100%;
 }
 
 .bgimg-3 {
-  background-image: url("../../assets/para3.png");
+  background-image: url("../../assets/homepage/para3.png");
   min-height: 400px;
   width: 100%;
 }
 
 .bgimg-4 {
-  background-image: url("../../assets/para4.png");
+  background-image: url("../../assets/homepage/para4.png");
   min-height: 400px;
   width: 100%;
 }

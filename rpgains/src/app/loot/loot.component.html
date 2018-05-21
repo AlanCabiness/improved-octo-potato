@@ -1,1 +1,32 @@
-<h1>Loot</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <h1>Loot</h1>
+  <div class="showloot" *ngIf="tokens.count != 0">
+    <button id=lootButton (click)="onClickMe()">Claim Loot</button>
+    <p class="text-center"><strong>{{lootname}}</strong></p>
+    <div class="col-sm-8 text-center" *ngIf="lootname==''">
+      <div id="loot">
+        <img class="lootBox" src="../assets/loot/lootBox.jpg" alt="Loot Box">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Standard Helmet'">
+      <div id="lootPicture">
+        <img class="johnnyB" src="../assets/dashboard/Johnny_Bravo.png" alt="RPGains">
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+
