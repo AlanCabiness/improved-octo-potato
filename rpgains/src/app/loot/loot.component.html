@@ -10,8 +10,21 @@
 <body>
 <div class="container-fluid">
   <h1>Loot</h1>
-  <button (click)="onClickMe()">Claim Loot</button>
-  <p class="text-center"><strong>{{lootname}}</strong></p>
+  <div class="showloot" *ngIf="tokens.count != 0">
+    <button id=lootButton (click)="onClickMe()">Claim Loot</button>
+    <p class="text-center"><strong>{{lootname}}</strong></p>
+    <div class="col-sm-8 text-center" *ngIf="lootname==''">
+      <div id="loot">
+        <img class="lootBox" src="../assets/loot/lootBox.jpg" alt="Loot Box">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Standard Helmet'">
+      <div id="lootPicture">
+        <img class="johnnyB" src="../assets/dashboard/Johnny_Bravo.png" alt="RPGains">
+      </div>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>

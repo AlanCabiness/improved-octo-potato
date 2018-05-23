@@ -15,6 +15,7 @@ import {TrackingComponent} from './tracking/tracking.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import {environment} from '../environments/environment';
+import { CustomizationComponent } from './customization/customization.component';
 
 
 
@@ -27,6 +28,7 @@ import {environment} from '../environments/environment';
     LootComponent,
     LoginComponent,
     TrackingComponent,
+    CustomizationComponent,
   ],
   imports: [
     BrowserModule,
