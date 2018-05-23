@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
+import {RouterModule, Routes} from '@angular/router';
 
-import {HomepageComponent} from "./homepage/homepage.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {InventoryComponent} from "./inventory/inventory.component";
-import {LoginComponent} from "./login/login.component";
-import {LootComponent} from "./loot/loot.component";
-import {TrackingComponent} from "./tracking/tracking.component";
-
+import {HomepageComponent} from './homepage/homepage.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {InventoryComponent} from './inventory/inventory.component';
+import {LoginComponent} from './login/login.component';
+import {LootComponent} from './loot/loot.component';
+import {TrackingComponent} from './tracking/tracking.component';
+import {CustomizationComponent} from './customization/customization.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/homepage', pathMatch: 'full'},
@@ -16,7 +16,8 @@ const routes: Routes = [
   {path: 'inventory', component: InventoryComponent},
   {path: 'login', component: LoginComponent},
   {path: 'loot', component: LootComponent},
-  {path: 'tracking', component: TrackingComponent}
+  {path: 'tracking', component: TrackingComponent},
+  {path: 'customization', component: CustomizationComponent}
 ];
 
 @NgModule({
