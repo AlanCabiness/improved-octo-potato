@@ -1,0 +1,162 @@
+@import "../../styles.css";
+
+body{
+  position: relative;
+  height: 1000px;
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+#one{
+  /*background-color: red;*/
+  height: 1000px;
+  overflow: scroll;
+}
+
+#two{
+  /*background-color: green;*/
+  height: 256px;
+}
+#three{
+  /*background-color: cyan;*/
+  height: 256px;
+}
+
+.row1{
+  /*background-image: url("../../assets/helmetStock.png");*/
+  height: 200px;
+  padding: 50px;
+}
+.img-thumbnail:hover {
+  -moz-box-shadow: 0 0 50px #3D424B;
+  -webkit-box-shadow: 0 0 50px #3D424B;
+  box-shadow: 0 0 50px #9D8D8F;
+}
+
+.row2{
+  background-image: url("../../assets/helmetStock.png");
+  height: 200px;
+}
+
+.row2:hover {
+  -moz-box-shadow: 0 0 30px #3D424B;
+  -webkit-box-shadow: 0 0 30px #3D424B;
+  box-shadow: 0 0 30px #9D8D8F;
+}
+
+.row3{
+  background-image: url("../../assets/helmetStock.png");
+  height: 200px;
+}
+.row3:hover {
+  -moz-box-shadow: 0 0 50px #3D424B;
+  -webkit-box-shadow: 0 0 50px #3D424B;
+  box-shadow: 0 0 50px #9D8D8F;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #9D8D8F;
+}
+
+.sidenavR{
+  padding-top: 70px;
+  color: gray;
+}
+.well{
+  height: 250px;
+  width: 250px;
+}
+
+.right{
+  background-color: #46344E;
+}
+#playerPicture{
+  padding-top: 200px;
+  padding-left: 200px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+
+  .row.content {
+    height: auto;
+  }
+}
+
+#graphicTextTable{
+  position: absolute;
+  top: 145%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-collapse:inherit;
+  border-spacing: 90px;
+}
+
+
+#gtCol {
+  height: 290px;
+  width: 290px;
+  color:white;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#gCol {
+  height: 80px;
+  width: 80px;
+}
+
+#gImg {
+  height: 300px;
+  width: 300px;
+}
+
+#gtcol:hover {
+  -moz-box-shadow: 0 0 50px #3D424B;
+  -webkit-box-shadow: 0 0 50px #3D424B;
+  box-shadow: 0 0 50px #3D424B;
+}
+
+
+/*!* Style the tab *!*/
+/*.tab {*/
+/*overflow: hidden;*/
+/*border: 1px solid #ccc;*/
+/*background-color: #f1f1f1;*/
+/*}*/
+
+/*!* Style the buttons that are used to open the tab content *!*/
+/*.tab button {*/
+/*background-color: inherit;*/
+/*float: left;*/
+/*border: none;*/
+/*outline: none;*/
+/*cursor: pointer;*/
+/*padding: 14px 16px;*/
+/*transition: 0.3s;*/
+/*}*/
+
+/*!* Change background color of buttons on hover *!*/
+/*.tab button:hover {*/
+/*background-color: #ddd;*/
+/*}*/
+
+/*!* Create an active/current tablink class *!*/
+/*.tab button.active {*/
+/*background-color: #ccc;*/
+/*}*/
+
+/*!* Style the tab content *!*/
+/*.tabcontent {*/
+/*display: none;*/
+/*padding: 6px 12px;*/
+/*border: 1px solid #ccc;*/
+/*border-top: none;*/
+/*}*/
