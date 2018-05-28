@@ -124,6 +124,21 @@ body{
   box-shadow: 0 0 50px #3D424B;
 }
 
+.navbar {
+  padding-top: 45px;
+  padding-left: 20px;
+  border-radius: 0;
+  vertical-align: middle;
+  height: 100px;
+  background-color: #5A5560;
+}
+
+.rpgLogo{
+  height: 75px;
+  padding: 10px;
+}
+
+
 
 /*!* Style the tab *!*/
 /*.tab {*/

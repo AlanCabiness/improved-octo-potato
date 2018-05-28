@@ -6,17 +6,16 @@ import {AppComponent} from './app.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import { InventoryComponent } from './inventory/inventory.component';
-import { LootComponent } from './loot/loot.component';
-import { LoginComponent } from './login/login.component';
-import { TrackingComponent } from './tracking/tracking.component';
-import { CustomizationComponent } from './customization/customization.component';
+import {InventoryComponent} from './inventory/inventory.component';
+import {LootComponent} from './loot/loot.component';
+import {LoginComponent} from './login/login.component';
+import {TrackingComponent} from './tracking/tracking.component';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {environment} from '../environments/environment';
-import { CustomizationComponent } from './customization/customization.component';
-import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import {CustomizationComponent} from './customization/customization.component';
+import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 
 @NgModule({
   declarations: [
@@ -33,9 +32,9 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase, 'rpgains'),
-    AngularFireModule,
-    Ng2GoogleChartsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    Ng2GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

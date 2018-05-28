@@ -1,3 +1,4 @@
+
 <html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +23,7 @@
     </div>
     <div class="nav navbar-expand-lg" id="myNavbar">
       <ul id="pages" class="nav navbar-nav navbar-right">
+        <li><a routerLink="/dashboard">Dashboard</a></li>
         <li><a routerLink="/tracking">Track</a></li>
         <li><a routerLink="/customization">Customize</a></li>
         <li><a routerLink="/loot">Loot</a></li>
@@ -87,3 +89,9 @@
   </div>
 </div>
 </body>
+
+<ul>
+  <li *ngFor="let user of users | async">
+    <pre>{{user | json}}</pre>
+  </li>
+</ul>
