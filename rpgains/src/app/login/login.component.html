@@ -5,21 +5,27 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="../../services/mongoService.js"></script>
 </head>
-<script src="../../services/mongoService.js"></script>
 <body>
 <nav id="navbar">
   <img src="../assets/homepage/rpgLogo2.png" height="75" routerLink="/homepage"/>
   <a routerLink="/login" id="logged">Sign-in/Up</a>
   <a routerLink="/dashboard">Play</a>
 </nav>
+<form id="createForm">
+  <input type="text" [(ngModel)]="name" name="name" placeholder="Full Name" required><br>
+  <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required><br>
+  <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required><br>
+  <input type="password" [(ngModel)]="verifypass" name="verifypass" placeholder="Confirm Password" required><br>
+  <input type="submit" value="Add a user" (click)="addUser()">
+</form>
+</body><!--
 <script>
   if (localStorage.session == 'logged') {
     document.getElementById('logged').innerHTML = "<button>Log out</button>"
   }
 </script>
-<!-- NEW USER-->
+&lt;!&ndash; NEW USER&ndash;&gt;
 <section class="page-section cta">
   <div class="container-fluid">
     <div class="row">
@@ -52,7 +58,7 @@
         </div>
       </div>
 
-      <!-- EXISTING USER-->
+      &lt;!&ndash; EXISTING USER&ndash;&gt;
 
       <div class="col-sm-5 mx-auto">
         <div class="cta-inner text-center rounded">
@@ -74,7 +80,7 @@
     </div>
   </div>
 </section>
-<!--<section class="page-section cta">
+&lt;!&ndash;<section class="page-section cta">
   <div class="container">
     <div class="row">
       <div class="col-sm">
@@ -127,7 +133,8 @@
       </div>
     </div>
   </div>
-</section>-->
+</section>&ndash;&gt;
 </body>
 </html>
 
+-->

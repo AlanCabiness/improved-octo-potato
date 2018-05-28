@@ -12,11 +12,10 @@ import {LootComponent} from './loot/loot.component';
 import {LoginComponent} from './login/login.component';
 import {TrackingComponent} from './tracking/tracking.component';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {environment} from '../environments/environment';
-import { CustomizationComponent } from './customization/customization.component';
-
+import {CustomizationComponent} from './customization/customization.component';
 
 
 @NgModule({
@@ -34,8 +33,8 @@ import { CustomizationComponent } from './customization/customization.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase, 'rpgains'),
-    AngularFireModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

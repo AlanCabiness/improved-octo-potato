@@ -10,6 +10,8 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
+  userName = localStorage.userName;
+
   ngOnInit() {
   }
 
