@@ -6,10 +6,11 @@ import {AppComponent} from './app.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {InventoryComponent} from './inventory/inventory.component';
-import {LootComponent} from './loot/loot.component';
-import {LoginComponent} from './login/login.component';
-import {TrackingComponent} from './tracking/tracking.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { LootComponent } from './loot/loot.component';
+import { LoginComponent } from './login/login.component';
+import { TrackingComponent } from './tracking/tracking.component';
+import { CustomizationComponent } from './customization/customization.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
