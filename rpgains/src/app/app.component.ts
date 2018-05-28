@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {AngularFireDatabase} from 'angularfire2/database';
 import {FirebaseListObservable} from 'angularfire2/database-deprecated';
 
+
+
 class Track {
   constructor(
     public weight: number,
@@ -20,10 +22,9 @@ class Track {
 })
 export class AppComponent {
   title = 'app';
+}
   /*public Users: FirebaseListObservable<Track[]>;
 
   constructor(db: AngularFireDatabase) {
     this.Users = db.list('/Users');
   }*/
-
-}
