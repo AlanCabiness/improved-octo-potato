@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CustomizationComponent implements OnInit {
 
+  userName = localStorage.userName;
   constructor() {
   }
 

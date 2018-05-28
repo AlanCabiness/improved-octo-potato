@@ -1,60 +1,60 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-  AngularFirestoreDocument,
-  AngularFirestoreModule
-} from 'angularfire2/firestore';
-
-interface User {
-  email: string;
-  eqArmor: string;
-  eqHelmet: string;
-  eqWeapon: string;
-  historyBench: {};
-  historyCurl: {};
-  historySquat: {};
-  historyWeight: {};
-  invArmor: [string];
-  invHelm: [string];
-  invWeapon: [string];
-  lastBench: number;
-  lastCurl: number;
-  lastSquat: number;
-  lastWeight: number;
-  name: string;
-  password: string;
-  xp: string;
-}
-
 import {Track} from '../track';
+// import { drawChart } from 'assets/javascript/chartTest';
 
 @Component({
   selector: 'app-tracking',
   templateUrl: './tracking.component.html',
-  styleUrls: ['./tracking.component.css']
+  styleUrls: ['./tracking.component.css'],
+
 })
 export class TrackingComponent implements OnInit {
 
-  usersCol: AngularFirestoreCollection<User>;
-  users: Observable<User[]>;
+  constructor() {}
 
-  // public users: Observable<any>;
-
-  constructor(private afs: AngularFirestore) {
-    // this.users = afs.collection('users', ref => ref.where('email', '==', 'acab1996@gmail.com'));
-  }
+  LineChartData =  {
+    chartType: 'LineChart',
+    dataTable: [
+      ['Task', 'Hours per Day'],
+      ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ],
+    options: {'title': 'Tasks'},
+  };
 
   model = new Track(200, 2000, 150, 100, 125);
 
   submitted = false;
 
   ngOnInit() {
-    /*this.usersCol = this.afs.collection('users');
-    this.users = this.usersCol.valueChanges();*/
   }
 
 }
+
+
+
+// google.charts.load('current', {'packages':['corechart']});
+// google.charts.setOnLoadCallback(drawChart);
+//
+// function drawChart() {
+//   var data = google.visualization.arrayToDataTable([
+//     ['Year', 'Sales', 'Expenses'],
+//     ['2004',  1000,      400],
+//     ['2005',  1170,      460],
+//     ['2006',  660,       1120],
+//     ['2007',  1030,      540]
+//   ]);
+//
+//   var options = {
+//     title: 'Company Performance',
+//     curveType: 'function',
+//     legend: { position: 'bottom' }
+//   };
+//
+//   var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+//
+//   chart.draw(data, options);
+// }

@@ -5,19 +5,34 @@
 -GRAY (#9D8D8F)
 -BROWN (#9B786F)
  */
-html{
-  background-color: #5a5560;
-}
+
 body{
   background-color: #5a5560;
-  height: 100%;
+  height: 910px;
   color: white;
   font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+label{
+  font-weight: normal
+}
+
+google-chart{
+  width: 100%;
 
 }
 
-a {
-  color:whitesmoke;
+button{
+  color: gray;
+  font-size: 30px;
+  background-color: #faed26;
+  height: 70px;
+  width: 100%;
+  border: whitesmoke;
+}
+.rpgLogo{
+  height: 75px;
+  padding: 10px;
 }
 
 .navbar{
@@ -26,93 +41,30 @@ a {
   border-radius: 0;
   vertical-align:middle;
   height: 75px;
-
-}
-body::before{
-  content: " ";
+  padding-bottom: 70px;
 }
 
-body::after{
-  content: none;
+a {
+  color:whitesmoke;
 }
 
-.rpgLogo{
-  height: 75px;
-  padding: 10px;
-}
-
-.container .row:before,
-.container .row:after {
-  content: none;
-}
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content1 {
-  padding-top: 50px;
-}
-
-.row.content2 {
-  padding-top: 50px;
-  padding-bottom: 45px;
-}
-
-/* Set gray background color and 100% height */
-.sidenavL {
-  padding-top: 15px;
-  background-color: #46344E;
-  color: whitesmoke;
-  border-style: solid;
-  border-color: whitesmoke;
-  height: 100%;
-}
-
-.sidenavR {
-  padding-top: 20px;
-  background-color: #5A5560;
-  color: gray;
-}
-
-.well{
-  height: 175px;
-  width: 175px;
-}
-
-#playerPicture{
-  padding-top: 70px;
-}
-
-img.stagePic{
+.checkIn{
   height: 100px;
-  width: 300px;
+  background-color: yellow;
 }
-.progress{
-  height: 70px;
-  margin: 0;
-  vertical-align:middle;
-  text-align: right;
+.graph{
+  height: 700px;
+  padding-top: 50px;
+}
+
+#trackNavBar{
+  padding: 10px;
+  text-align: center;
+  color: whitesmoke;
   background-color: #46344E;
 }
-.progress-bar{
-  /*background-color: #FAED26;*/
-  vertical-align:middle;
-}
 
-/* Set black background color, white text and some padding */
-footer {
-  background-color: #555;
-  color: white;
-  padding: 15px;
-}
-
-/* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
-  .sidenavL {
-    height: auto;
-    padding: 15px;
-  }
-
-  .sidenavR {
-    height: auto;
-    padding: 15px;
-  }
-  .row.content {height:auto;}
+.track{
+  padding: 20px;
+  background-color: #46344E;
 }

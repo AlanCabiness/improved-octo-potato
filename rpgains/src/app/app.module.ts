@@ -2,7 +2,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
-
 import {AppComponent} from './app.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {AppRoutingModule} from './app-routing.module';
@@ -16,7 +15,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {environment} from '../environments/environment';
 import {CustomizationComponent} from './customization/customization.component';
-
+import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,8 @@ import {CustomizationComponent} from './customization/customization.component';
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    Ng2GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
