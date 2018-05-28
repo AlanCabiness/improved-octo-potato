@@ -59,6 +59,15 @@ body{
   background-color: #9D8D8F;
 }
 
+.sidenavR{
+  padding-top: 70px;
+  color: gray;
+}
+.well{
+  height: 250px;
+  width: 250px;
+}
+
 .right{
   background-color: #46344E;
 }

@@ -1,3 +1,70 @@
+/*colors:
+-YELLOW (#FAED26)
+-PURPLE (#46344E)
+-DARK GRAY (#5A5560)
+-GRAY (#9D8D8F)
+-BROWN (#9B786F)
+ */
+
 body{
-  padding-top: 65px;
+  background-color: #5a5560;
+  height: 910px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+label{
+  font-weight: normal
+}
+
+google-chart{
+  width: 100%;
+
+}
+
+button{
+  color: gray;
+  font-size: 30px;
+  background-color: #faed26;
+  height: 70px;
+  width: 100%;
+  border: whitesmoke;
+}
+.rpgLogo{
+  height: 75px;
+  padding: 10px;
+}
+
+.navbar{
+  padding-top: 45px;
+  padding-left: 20px;
+  border-radius: 0;
+  vertical-align:middle;
+  height: 75px;
+  padding-bottom: 70px;
+}
+
+a {
+  color:whitesmoke;
+}
+
+.checkIn{
+  height: 100px;
+  background-color: yellow;
+}
+.graph{
+  height: 700px;
+  padding-top: 50px;
+}
+
+#trackNavBar{
+  padding: 10px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #46344E;
+}
+
+.track{
+  padding: 20px;
+  background-color: #46344E;
 }
