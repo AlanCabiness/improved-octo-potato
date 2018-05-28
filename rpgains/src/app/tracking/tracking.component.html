@@ -1,82 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-  <title>Customization</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
 </head>
+<nav id="navbar">
+  <img src="../assets/homepage/rpgLogo2.png" height="75" routerLink="/homepage"/>
+  <a routerLink="/login" id="logged">Sign-in/Up</a>
+  <a routerLink="/dashboard">Play</a>
+</nav>
+<script>
+  if (localStorage.session == 'logged') {
+    document.getElementById('logged').innerHTML = "<button>Log out</button>"
+  }
+</script>
 <body>
-<div class="container-fluid">
-  <div class="col-sm-12">
-    <div class="col-sm-4 sidenav">
-      <p>Fname Lname</p>
-        <div class="col-sm-12 sidenavL">
-          <p>Weight</p>
-          <p>Calorie Intake</p>
-          <p>Squat</p>
-          <p>Bench</p>
-          <p>Curl</p>
-        </div>
-      <div class="col-sm-11 gains">
-      </div>
+<div class="container">
+  <h1>Tracking Form</h1>
+  <form #trackingForm="ngForm">
+    {{diagnostic}}
+    <div class="form-group">
+      <label for="weight">Weight</label>
+      <input type="text" class="form-control" id="weight" required [(ngModel)]="model.weight" name="weight">
     </div>
-    <div  id="gains" class="row content">
+    <div class="form-group">
+      <label for="bench">Bench wt.</label>
+      <input type="text" class="form-control" id="bench" required [(ngModel)]="model.bench" name="bench">
     </div>
-
-
-
-    <div class="col-sm-8 right">
-      <div id="oneGraph" class="tabcontent">
-        <div class="col-sm-1 blank">
-        </div>
-        <div class="col-sm-9 graph">
-        </div>
-        <div class="col-sm-1 blank">
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <ul class="nav">
-          <li><a href="#section2">Armor</a></li>
-          <li><a href="#section3">Helmet</a></li>
-          <li><a href="#section3">Weapon</a></li>
-        </ul>
-      </div>
-
-
-      <!--<div id="two" class="tabcontent">-->
-      <!--<div class="col-sm-2 blank">-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row2">-->
-      <!--<h4>col 1</h4>-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row2">-->
-      <!--<h4>col 2</h4>-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row2">-->
-      <!--<h4>col 3</h4>-->
-      <!--</div>-->
-
-      <!--</div>-->
-
-      <!--<div id="three" class="tabcontent">-->
-      <!--<div class="col-sm-2 blank">-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row3">-->
-      <!--<h4>col 1</h4>-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row3">-->
-      <!--<h4>col 2</h4>-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row3">-->
-      <!--<h4>col 3</h4>-->
-
-      <!--</div>-->
-      <!--</div>-->
+    <div class="form-group">
+      <label for="squat">Squat wt.</label>
+      <input type="text" class="form-control" id="squat" required [(ngModel)]="model.squat" name="squat">
     </div>
-  </div>
+    <div class="form-group">
+      <label for="curl">Curl wt.</label>
+      <input type="text" class="form-control" id="curl" required [(ngModel)]="model.curl" name="curl">
+    </div>
+    <div class="form-group">
+      <label for="calories">Calorie Intake</label>
+      <input type="text" class="form-control" id="calories" required [(ngModel)]="model.calories" name="calries">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
 </div>
 </body>
-</html>

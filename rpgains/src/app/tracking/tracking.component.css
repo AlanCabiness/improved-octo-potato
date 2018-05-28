@@ -99,3 +99,6 @@ body{
     height: auto;
   }
 }
+body{
+  padding-top: 65px;
+}
