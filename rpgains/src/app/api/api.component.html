@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-left">
+      <a routerLink="/homepage"><img class="rpgLogo" src="../assets/dashboard/rpgLogo2.png" alt="RPGains"></a>
+    </div>
+    <div class="nav navbar-expand-lg" id="myNavbar">
+      <ul id="pages" class="nav navbar-nav navbar-right">
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a routerLink="/tracking">Track</a></li>
+        <li><a routerLink="/inventory">Customize</a></li>
+        <li><a routerLink="/loot">Loot</a></li>
+        <li><a routerLink="/api">Google Fit </a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h3>Google Fit</h3>
+<div>
+  <button (click)="clear(); showConfig()">get</button>
+  <button (click)="clear()">clear</button>
+  <span *ngIf="config">
+    Mock JSON Data: {{config.Steps}} steps achieved.
+  </span>
+</div>
+<p *ngIf="error" class="error">{{error | json}}</p>
+</body>
+</html>

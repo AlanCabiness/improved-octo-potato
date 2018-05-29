@@ -1,3 +1,11 @@
+/*colors:
+-YELLOW (#FAED26)
+-PURPLE (#46344E)
+-DARK GRAY (#5A5560)
+-GRAY (#9D8D8F)
+-BROWN (#9B786F)
+ */
+
 html{
   background-color: #5a5560;
 }
@@ -6,41 +14,27 @@ body{
   height: 900px;
   color: white;
   font-family: 'Oswald', sans-serif;
+
 }
 
-img.rpgLogo{
+.rpgLogo{
   height: 75px;
-  width: 175px;
   padding: 10px;
+  width: 175px;
 }
 
 a {
   color:whitesmoke;
 }
 
-.navbar {
+.navbar{
   padding-top: 45px;
   padding-left: 20px;
   border-radius: 0;
-  vertical-align: middle;
+  vertical-align:middle;
   height: 75px;
 }
 
-#lootButton{
-  background-color: #faed26;
-  color: #5a5560;
-  font-size: 50px;
-  height: 200px;
-  width: 100%;
+button {
+  background-color: #5A5560;
 }
-
-
-img {
-  padding: 50px;
-  height: 500px;
-  width: 500px;
-}
-
-
-
-

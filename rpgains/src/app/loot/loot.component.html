@@ -17,30 +17,99 @@
       <ul id="pages" class="nav navbar-nav navbar-right">
         <li><a routerLink="/dashboard">Dashboard</a></li>
         <li><a routerLink="/tracking">Track</a></li>
-        <li><a routerLink="/customization">Customize</a></li>
+        <li><a routerLink="/inventory">Customize</a></li>
         <li><a routerLink="/loot">Loot</a></li>
+        <li><a routerLink="/api">Google Fit </a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <div class="container-fluid">
-  <h1>Loot</h1>
+  <div class="col-sm-2 blank">
+  </div>
+  <div class="col-sm-8 blank">
   <div class="showloot" *ngIf="tokens.count != 0">
-    <button id=lootButton (click)="onClickMe()">Claim Loot</button>
-    <p class="text-center"><strong>{{lootname}}</strong></p>
+    <div class="col-sm-2 blank">
+    </div>
+    <!--<p class="text-center"><strong>{{lootname}}</strong></p>-->
     <div class="col-sm-8 text-center" *ngIf="lootname==''">
       <div id="loot">
-        <img class="lootBox" src="../assets/loot/lootBox.jpg" alt="Loot Box">
+        <img class="lootBox" src="../../assets/treasureChest.png" alt="Loot Box">
       </div>
     </div>
     <div class="col-sm-8 text-center" *ngIf="lootname=='Standard Helmet'">
-      <div id="lootPicture">
-        <img class="johnnyB" src="../assets/dashboard/Johnny_Bravo.png" alt="RPGains">
+      <div id="loothelmetstandard">
+        <img class="standHelmet" src="../../assets/helmetGreen.png" alt="Helmet">
       </div>
     </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Good Helmet'">
+      <div id="loothelmetgood">
+        <img class="goodHelmet" src="../../assets/helmetBlue.png" alt="Helmet">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Better Helmet'">
+      <div id="loothelmetbetter">
+        <img class="betterHelmet" src="../../assets/helmetPurple.png" alt="Helmet">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Best Helmet'">
+      <div id="loothelmetbest">
+        <img class="bestHelmet" src="../../assets/helmetYellow.png" alt="Helmet">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Standard Armor'">
+      <div id="lootarmorstandard">
+        <img class="standArmor" src="../../assets/armorGreen.png" alt="Armor">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Good Armor'">
+      <div id="lootarmorgood">
+        <img class="goodArmor" src="../../assets/armorBlue.png" alt="Armor">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Better Armor'">
+      <div id="lootarmorbetter">
+        <img class="betterArmor" src="../../assets/armorPurple.png" alt="Armor">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Best Armor'">
+      <div id="lootarmorbest">
+        <img class="bestArmor" src="../../assets/armorYellow.png" alt="Armor">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Standard Weapon'">
+      <div id="lootweaponstandard">
+        <img class="standWeapon" src="../../assets/weaponGreen.png" alt="Weapon">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Good Weapon'">
+      <div id="lootweapongood">
+        <img class="goodWeapon" src="../../assets/weaponBlue.png" alt="Weapon">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Better Weapon'">
+      <div id="lootweaponbetter">
+        <img class="betterWeapon" src="../../assets/weaponPurple.png" alt="Weapon">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Best Weapon'">
+      <div id="lootweaponbest">
+        <img class="bestWeapon" src="../../assets/weaponYellow.png" alt="Weapon">
+      </div>
+    </div>
+    <button id=lootButton (click)="onClickMe()">Claim Loot</button>
+    <div class="col-sm-2 blank">
+    </div>
   </div>
-
+    <div class="col-sm-2 blank">
+    </div>
+  <div class="col-sm-8 text-center" *ngIf="tokens.count == 0">
+    <h1>You are currently out of tokens. Come back when you have more.</h1>
+  </div>
+  </div>
+  <div class="col-sm-2 blank">
+  </div>
 </div>
 </body>
 </html>

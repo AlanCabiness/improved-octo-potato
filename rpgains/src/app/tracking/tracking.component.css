@@ -6,12 +6,34 @@
 -BROWN (#9B786F)
  */
 
+html{
+  background-color: #5a5560;
+}
 body{
   background-color: #5a5560;
-  height: 910px;
+  height: 900px;
   color: white;
   font-family: 'Oswald', sans-serif;
-  font-size: 20px;
+
+}
+
+.rpgLogo{
+  height: 75px;
+  padding: 10px;
+  width: 175px;
+}
+
+a {
+  color:whitesmoke;
+}
+
+.navbar{
+  padding-top: 45px;
+  padding-left: 20px;
+  border-radius: 0;
+  vertical-align:middle;
+  height: 75px;
+
 }
 label{
   font-weight: normal
@@ -41,7 +63,7 @@ button{
   border-radius: 0;
   vertical-align:middle;
   height: 75px;
-  padding-bottom: 70px;
+
 }
 
 a {
