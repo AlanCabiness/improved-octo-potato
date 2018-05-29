@@ -15,7 +15,7 @@ import { Player } from '../Player';
 export class DashboardComponent implements OnInit {
   document;
   users: Observable<any>;
-  username = localStorage.userName;
+  userName = localStorage.userName;
 
   constructor(private afs: AngularFirestore) {
     const document: AngularFirestoreDocument<User> = afs.doc('users/' + localStorage.userid);

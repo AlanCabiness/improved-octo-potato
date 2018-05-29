@@ -29,6 +29,7 @@
 
 <div class="container-fluid text-left">
   <div class="row content1">
+    <div class="col-sm-1 blank"></div>
     <div class="col-sm-2 sidenavL" *ngIf="document | async as t">
       <p>Weight {{t.lastWeight}}</p>
       <p>Calorie Intake 2000</p>
@@ -46,8 +47,8 @@
         <img class="stagePic" src="../assets/dashboard/Stage.png" alt="stage">
       </div>
     </div>
-  
-    <div class="col-sm-2 sidenavR" *ngIf="document | async as t">
+
+    <div class="col-sm-3 sidenavR" *ngIf="document | async as t">
       <div class="well text-center">
         <img src="{{t.eqHelmet}}" class="img-thumbnail">
       </div>
