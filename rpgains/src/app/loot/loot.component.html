@@ -19,10 +19,68 @@
       </div>
     </div>
     <div class="col-sm-8 text-center" *ngIf="lootname=='Standard Helmet'">
-      <div id="lootPicture">
-        <img class="johnnyB" src="../assets/dashboard/Johnny_Bravo.png" alt="RPGains">
+      <div id="loothelmetstandard">
+        <img class="standHelmet" src="../assets/helmetStock.png" alt="Helmet">
       </div>
     </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Good Helmet'">
+      <div id="loothelmetgood">
+        <img class="goodHelmet" src="../assets/helmetStock.png" alt="Helmet">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Better Helmet'">
+      <div id="loothelmetbetter">
+        <img class="betterHelmet" src="../assets/helmetStock.png" alt="Helmet">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Best Helmet'">
+      <div id="loothelmetbest">
+        <img class="bestHelmet" src="../assets/helmetStock.png" alt="Helmet">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Standard Armor'">
+      <div id="lootarmorstandard">
+        <img class="standArmor" src="../assets/chest.png" alt="Armor">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Good Armor'">
+      <div id="lootarmorgood">
+        <img class="goodArmor" src="../assets/chest.png" alt="Armor">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Better Armor'">
+      <div id="lootarmorbetter">
+        <img class="betterArmor" src="../assets/chest.png" alt="Armor">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Best Armor'">
+      <div id="lootarmorbest">
+        <img class="bestArmor" src="../assets/chest.png" alt="Armor">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Standard Weapon'">
+      <div id="lootweaponstandard">
+        <img class="standWeapon" src="../assets/swordy.png" alt="Weapon">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Good Weapon'">
+      <div id="lootweapongood">
+        <img class="goodWeapon" src="../assets/swordy.png" alt="Weapon">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Better Weapon'">
+      <div id="lootweaponbetter">
+        <img class="betterWeapon" src="../assets/swordy.png" alt="Weapon">
+      </div>
+    </div>
+    <div class="col-sm-8 text-center" *ngIf="lootname=='Best Weapon'">
+      <div id="lootweaponbest">
+        <img class="bestWeapon" src="../assets/swordy.png" alt="Weapon">
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8 text-center" *ngIf="tokens.count == 0">
+    <h1>You are currently out of tokens. Come back when you have more.</h1>
   </div>
 
 </div>
