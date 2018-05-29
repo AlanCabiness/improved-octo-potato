@@ -8,6 +8,7 @@ import {LoginComponent} from './login/login.component';
 import {LootComponent} from './loot/loot.component';
 import {TrackingComponent} from './tracking/tracking.component';
 import {CustomizationComponent} from './customization/customization.component';
+import {ApiComponent} from './api/api.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/homepage', pathMatch: 'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'loot', component: LootComponent},
   {path: 'tracking', component: TrackingComponent},
-  {path: 'customization', component: CustomizationComponent}
+  {path: 'customization', component: CustomizationComponent},
+  {path: 'api', component: ApiComponent}
 ];
 
 @NgModule({
