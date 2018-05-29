@@ -18,7 +18,7 @@
       <ul id="pages" class="nav navbar-nav navbar-right">
         <li><a routerLink="/dashboard">Dashboard</a></li>
         <li><a routerLink="/tracking">Track</a></li>
-        <li><a routerLink="/customization">Customize</a></li>
+        <li><a routerLink="/inventory">Customize</a></li>
         <li><a routerLink="/loot">Loot</a></li>
         <li><a routerLink="/api">Google Fit </a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
@@ -29,6 +29,8 @@
 
 <div class="container-fluid text-left">
   <div class="row content1">
+    <div class="col-sm-1 blank">
+    </div>
     <div class="col-sm-2 sidenavL">
       <p>Weight</p>
       <p>Calorie Intake</p>
@@ -37,7 +39,7 @@
       <p>Curl</p>
     </div>
 
-    <div class="col-sm-8 text-center">
+    <div class="col-sm-6 text-center">
       <h1>{{userName}}</h1>
       <div id="playerPicture">
         <img class="johnnyB" src="../assets/dashboard/Johnny_Bravo.png" alt="RPGains">
@@ -48,7 +50,7 @@
     </div>
 
 
-    <div class="col-sm-2 sidenavR">
+    <div class="col-sm-3 sidenavR">
       <div class="well text-center">
         <p>HELMET</p>
       </div>

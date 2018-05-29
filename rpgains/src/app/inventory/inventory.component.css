@@ -1,10 +1,51 @@
-@import "../../styles.css";
-
+html{
+  background-color: #5a5560;
+}
 body{
-  position: relative;
-  height: 1000px;
-  font-size: 25px;
-  color: whitesmoke;
+  background-color: #5a5560;
+  height: 100%;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.rpgLogo{
+  height: 75px;
+  padding: 10px;
+}
+
+a {
+  color:whitesmoke;
+}
+
+.navbar{
+  padding-top: 45px;
+  padding-left: 20px;
+  border-radius: 0;
+  vertical-align:middle;
+  height: 75px;
+}
+ul{
+  list-style-type: initial;
+}
+.navbar{
+  padding-top: 45px;
+  padding-left: 20px;
+  border-radius: 0;
+  vertical-align:middle;
+  height: 75px;
+
+}
+
+.well{
+  height: 250px;
+  width: 250px;
+  color: #5A5560;
+}
+
+.sidenavR{
+  padding-top: 70px;
+  color: gray;
 }
 
 #one{
@@ -64,7 +105,7 @@ body{
 
 /* Set gray background color and 100% height */
 .sidenav {
-  background-color: #9D8D8F;
+  background-color: #5a5560;
 }
 
 .right{
@@ -123,9 +164,7 @@ body{
   box-shadow: 0 0 50px #3D424B;
 }
 
-a {
-  color: #faed26;
-}
+
 
 
 
