@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../Player';
 
 
 @Component({
@@ -10,7 +11,7 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
-  userName = localStorage.userName;
+  temp = new Player();
 
   ngOnInit() {
   }
