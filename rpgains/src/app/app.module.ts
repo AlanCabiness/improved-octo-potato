@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 import {AppComponent} from './app.component';
@@ -11,6 +12,7 @@ import {InventoryComponent} from './inventory/inventory.component';
 import {LootComponent} from './loot/loot.component';
 import {LoginComponent} from './login/login.component';
 import {TrackingComponent} from './tracking/tracking.component';
+import {ApiComponent} from './api/api.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -29,15 +31,17 @@ import { CustomizationComponent } from './customization/customization.component'
     LoginComponent,
     TrackingComponent,
     CustomizationComponent,
+    ApiComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase, 'rpgains'),
     AngularFireModule
   ],
-  providers: [],
+  providers: [] ,
   bootstrap: [AppComponent]
 })
 export class AppModule {
