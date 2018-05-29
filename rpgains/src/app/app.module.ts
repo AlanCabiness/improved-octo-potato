@@ -19,6 +19,7 @@ import {environment} from '../environments/environment';
 import {CustomizationComponent} from './customization/customization.component';
 import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import {Ng2GoogleChartsModule} from 'ng2-google-charts';
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     Ng2GoogleChartsModule
   ],
   providers: [] ,

@@ -29,15 +29,12 @@
 
 <div class="container-fluid text-left">
   <div class="row content1">
-    <div class="col-sm-1 blank">
-    </div>
-    <div class="col-sm-2 sidenavL">
-      <p>Weight</p>
-      <p>Calorie Intake</p>
-      <p>Squat</p>
-      <p>Bench</p>
-      <p>Curl</p>
-      <p>Google Fit </p>
+    <div class="col-sm-2 sidenavL" *ngIf="document | async as t">
+      <p>Weight {{t.lastWeight}}</p>
+      <p>Calorie Intake 2000</p>
+      <p>Squat {{t.lastSquat}}</p>
+      <p>Bench {{t.lastBench}}</p>
+      <p>Curl {{t.lastCurl}}</p>
     </div>
 
     <div class="col-sm-6 text-center">
@@ -49,17 +46,16 @@
         <img class="stagePic" src="../assets/dashboard/Stage.png" alt="stage">
       </div>
     </div>
-
-
-    <div class="col-sm-3 sidenavR">
+  
+    <div class="col-sm-2 sidenavR" *ngIf="document | async as t">
       <div class="well text-center">
-        <p>HELMET</p>
+        <img src="{{t.eqHelmet}}" class="img-thumbnail">
       </div>
       <div class="well text-center">
-        <p>ARMOR</p>
+        <img src="{{t.eqArmor}}" class="img-thumbnail">
       </div>
       <div class="well text-center">
-        <p>WEAPON</p>
+        <img src="{{t.eqWeapon}}" class="img-thumbnail">
       </div>
     </div>
   </div>
