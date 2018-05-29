@@ -12,11 +12,61 @@ export class TrackingComponent implements OnInit {
 
   constructor() {}
 
-  LineChartData =  {
+  weight =  {
     chartType: 'LineChart',
     dataTable: [
       ['Task', 'Hours per Day'],
       ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ],
+    options: {'title': 'Tasks'},
+  };
+
+  bench =  {
+    chartType: 'LineChart',
+    dataTable: [
+      ['Task', 'Hours per Day'],
+      ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ],
+    options: {'title': 'Tasks'},
+  };
+
+  squat =  {
+    chartType: 'LineChart',
+    dataTable: [
+      ['Task', 'Hours per Day'],
+      ['Work',     31],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ],
+    options: {'title': 'Tasks'},
+  };
+  curl =  {
+    chartType: 'LineChart',
+    dataTable: [
+      ['Task', 'Hours per Day'],
+      ['Work',     31],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ],
+    options: {'title': 'Tasks'},
+  };
+  calorie =  {
+    chartType: 'LineChart',
+    dataTable: [
+      ['Task', 'Hours per Day'],
+      ['Work',     31],
       ['Eat',      2],
       ['Commute',  2],
       ['Watch TV', 2],
