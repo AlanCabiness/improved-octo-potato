@@ -26,14 +26,6 @@ export class DashboardComponent implements OnInit {
   temp = new Player();
 
   ngOnInit() {
-    /*this.UsersCollection = this.afs.collection('users');
-    this.user = this.UsersCollection.snapshotChanges().map(changes => {
-      return changes.map(a => {
-        const data = a.payload.doc.data() as User;
-        data.email = a.payload.doc.email;
-        return data;
-      });
-    });*/
   }
 
 }

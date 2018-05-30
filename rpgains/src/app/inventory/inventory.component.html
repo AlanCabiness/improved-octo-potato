@@ -32,356 +32,355 @@
       <div class="col-sm-4 blank">
       </div>
 
-      <div class="col-sm-4 sidenavR">
+      <div class="col-sm-4 sidenavR" *ngIf="user | async as t">
         <div class="well text-center">
-          <p>HELMET</p>
+          <img src="{{t.eqHelmet}}" class="img-thumbnail">
         </div>
         <div class="well text-center">
-          <p>ARMOR</p>
+          <img src="{{t.eqArmor}}" class="img-thumbnail">
         </div>
         <div class="well text-center">
-          <p>WEAPON</p>
+          <img src="{{t.eqWeapon}}" class="img-thumbnail">
         </div>
       </div>
     </div>
 
     <div class="col-sm-7 right">
       <nav class="navbar">
-            <ul *ngFor="let menu of menus"
-                [class.selected]="menu === selectedMenu"
-                (click)="onSelect(menu)">
-              <li> <a> {{menu.name}}</a></li>
-            </ul>
+        <ul *ngFor="let menu of menus"
+            [class.selected]="menu === selectedMenu"
+            (click)="onSelect(menu)">
+          <li><a> {{menu.name}}</a></li>
+        </ul>
       </nav>
       <!--<div class="tab">-->
-        <!--<ul *ngFor="let menu of menus"-->
-            <!--[class.selected]="menu === selectedMenu"-->
-            <!--(click)="onSelect(menu)">-->
-          <!--<li> <a> {{menu.name}}</a></li>-->
+      <!--<ul *ngFor="let menu of menus"-->
+      <!--[class.selected]="menu === selectedMenu"-->
+      <!--(click)="onSelect(menu)">-->
+      <!--<li> <a> {{menu.name}}</a></li>-->
 
-        <!--</ul>-->
-        <!--If armor is selected-->
-        <div *ngIf="selectedMenu.name === 'Armor'">
-          <h2>{{ selectedMenu.name | uppercase }} Details</h2>
-          <div  id="one" class="tabcontent">
+      <!--</ul>-->
+      <!--If armor is selected-->
+      <div *ngIf="selectedMenu.name === 'Armor'">
+        <h2>{{ selectedMenu.name | uppercase }} Details</h2>
+        <div id="one" class="tabcontent">
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"
+                                            (click)="equip('../../assets/armorBlue.png', 'armor')"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
+          </div>
           <div class="col-sm-3 row1">
             <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
           </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
-            </div>
-        </div>
-        </div>
-        <!--If helmet is selected-->
-        <div *ngIf="selectedMenu.name === 'Helmet'">
-          <h2>{{ selectedMenu.name | uppercase }} Details</h2>
-          <div  id="two" class="tabcontent">
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
-            </div>
-
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/armorYellow.png" class="img-thumbnail"></a>
           </div>
         </div>
-        <!--If weapon is selected-->
-        <div *ngIf="selectedMenu.name === 'Weapon'">
-          <h2>{{ selectedMenu.name | uppercase }} Details</h2>
-          <div  id="three" class="tabcontent">
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
-            </div>
-            <div class="col-sm-3 row1">
-              <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
-            </div>
-
+      </div>
+      <!--If helmet is selected-->
+      <div *ngIf="selectedMenu.name === 'Helmet'">
+        <h2>{{ selectedMenu.name | uppercase }} Details</h2>
+        <div id="two" class="tabcontent">
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
           </div>
-        </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/helmetYellow.png" class="img-thumbnail"></a>
+          </div>
 
+        </div>
+      </div>
+      <!--If weapon is selected-->
+      <div *ngIf="selectedMenu.name === 'Weapon'">
+        <h2>{{ selectedMenu.name | uppercase }} Details</h2>
+        <div id="three" class="tabcontent">
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponGreen.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponBlue.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponPurple.png" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-3 row1">
+            <a routerLink="/inventory"><img src="../../assets/weaponYellow.png" class="img-thumbnail"></a>
+          </div>
+
+        </div>
       </div>
 
+    </div>
 
 
-      <!--<div id="two" class="tabcontent">-->
-      <!--<div class="col-sm-2 blank">-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row2">-->
-      <!--<h4>col 1</h4>-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row2">-->
-      <!--<h4>col 2</h4>-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row2">-->
-      <!--<h4>col 3</h4>-->
-      <!--</div>-->
+    <!--<div id="two" class="tabcontent">-->
+    <!--<div class="col-sm-2 blank">-->
+    <!--</div>-->
+    <!--<div class="col-sm-3 row2">-->
+    <!--<h4>col 1</h4>-->
+    <!--</div>-->
+    <!--<div class="col-sm-3 row2">-->
+    <!--<h4>col 2</h4>-->
+    <!--</div>-->
+    <!--<div class="col-sm-3 row2">-->
+    <!--<h4>col 3</h4>-->
+    <!--</div>-->
 
-      <!--</div>-->
+    <!--</div>-->
 
-      <!--<div id="three" class="tabcontent">-->
-      <!--<div class="col-sm-2 blank">-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row3">-->
-      <!--<h4>col 1</h4>-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row3">-->
-      <!--<h4>col 2</h4>-->
-      <!--</div>-->
-      <!--<div class="col-sm-3 row3">-->
-      <!--<h4>col 3</h4>-->
+    <!--<div id="three" class="tabcontent">-->
+    <!--<div class="col-sm-2 blank">-->
+    <!--</div>-->
+    <!--<div class="col-sm-3 row3">-->
+    <!--<h4>col 1</h4>-->
+    <!--</div>-->
+    <!--<div class="col-sm-3 row3">-->
+    <!--<h4>col 2</h4>-->
+    <!--</div>-->
+    <!--<div class="col-sm-3 row3">-->
+    <!--<h4>col 3</h4>-->
 
-      <!--</div>-->
-      <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
 
   </div>
 </div>
-
 
 
 </body>
