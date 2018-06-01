@@ -38,8 +38,8 @@
       <p>Curl {{t.lastCurl}}</p>
     </div>
 
-    <div class="col-sm-6 text-center">
-      <h1>{{userName}}</h1>
+    <div class="col-sm-6 text-center" *ngIf="document | async as t">
+      <h1>{{t.name}}</h1>
       <div id="playerPicture">
         <img class="johnnyB" src="../assets/dashboard/Johnny_Bravo.png" alt="RPGains">
       </div>

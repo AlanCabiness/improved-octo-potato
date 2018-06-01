@@ -3,7 +3,7 @@ import {Menu} from '../menu';
 import {MENUS} from '../menuItems';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 import {Observable} from 'rxjs/observable';
-import {User} from '../User'
+import {User} from '../User';
 
 @Component({
   selector: 'app-inventory',
@@ -29,13 +29,11 @@ export class InventoryComponent implements OnInit {
   }
 
   equip(path: string, type: string) {
-    if (type == "helmet") {
+    if (type === 'helmet') {
       this.afs.collection('users').doc(localStorage.userid).set({'eqHelmet': path}, {merge: true});
-    }
-    else if (type == "armor") {
+    } else if (type === 'armor') {
       this.afs.collection('users').doc(localStorage.userid).set({'eqArmor': path}, {merge: true});
-    }
-    else if (type == "weapon") {
+    } else if (type === 'weapon') {
       this.afs.collection('users').doc(localStorage.userid).set({'eqWeapon': path}, {merge: true});
     }
   }
