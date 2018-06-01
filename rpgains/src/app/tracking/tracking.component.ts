@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Track} from '../track';
+import {AngularFirestoreDocument, AngularFirestore} from 'angularfire2/firestore';
+import {User} from '../User';
+import {Observable} from 'rxjs/observable';
 // import { drawChart } from 'assets/javascript/chartTest';
 
 @Component({
@@ -10,8 +13,14 @@ import {Track} from '../track';
 })
 export class TrackingComponent implements OnInit {
 
-  constructor() {}
+  userName = localStorage.userName;
+  private userDoc: AngularFirestoreDocument<User>;
+  user: Observable<User>;
 
+  constructor(private afs: AngularFirestore) {
+    this.userDoc = afs.doc('users/' + localStorage.userid);
+    this.user = this.userDoc.valueChanges();
+  }
   weight =  {
     chartType: 'LineChart',
     dataTable: [
