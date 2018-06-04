@@ -19,6 +19,12 @@ import {environment} from '../environments/environment';
 import {CustomizationComponent} from './customization/customization.component';
 import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 
+import { HttpModule } from '@angular/http';
+import { CoreModule } from './core/core.module';
+
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
 
 @NgModule({
   declarations: [
@@ -30,9 +36,12 @@ import {Ng2GoogleChartsModule} from 'ng2-google-charts';
     LoginComponent,
     TrackingComponent,
     CustomizationComponent,
-    ApiComponent,
+    ApiComponent
   ],
   imports: [
+    AngularFireAuthModule,
+    CoreModule,
+    HttpModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -41,7 +50,6 @@ import {Ng2GoogleChartsModule} from 'ng2-google-charts';
     AngularFirestoreModule.enablePersistence(),
     Ng2GoogleChartsModule
   ],
-  providers: [] ,
   bootstrap: [AppComponent]
 })
 export class AppModule {
