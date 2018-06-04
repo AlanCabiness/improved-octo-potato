@@ -41,7 +41,7 @@ import {Ng2GoogleChartsModule} from 'ng2-google-charts';
     AngularFirestoreModule.enablePersistence(),
     Ng2GoogleChartsModule
   ],
-  providers: [] ,
+  providers: [ApiComponent] ,
   bootstrap: [AppComponent]
 })
 export class AppModule {

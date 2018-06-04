@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js"></script>
 </head>
-<body>
+<body onload="handleClientLoad()">
 <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-left">
@@ -24,9 +26,22 @@
     </div>
   </div>
 </nav>
+
+
+
+<div id="auth-status" style="display: inline; padding-left: 25px"></div><hr>
+
+
+
 <h3>Google Fit</h3>
+<!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
+
 <div>
-  <button (click)="clear(); showConfig()">get</button>
+  <button id="sign-in-or-out-button"
+          style="margin-left: 25px" onclick="handleAuthClick()">Sign In/Authorize</button>
+  <button id="revoke-access-button"
+          style="display: inline-block; margin-left: 25px"onclick="revokeAccess()">Revoke access</button>
+  <button id="api-call"(click)="clear(); showConfig();">get</button>
   <button (click)="clear()">clear</button>
   <span *ngIf="config">
     Mock JSON Data: {{config.Steps}} steps achieved.

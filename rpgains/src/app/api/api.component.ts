@@ -22,8 +22,8 @@ export class ApiComponent implements OnInit {
 
   showConfig() {
     this.configService.getConfig()
-      .subscribe((data: Config) => this.config = {
-        Steps: data['Steps']
+      .subscribe(data => {
+        console.log(data);
       });
   }
 
