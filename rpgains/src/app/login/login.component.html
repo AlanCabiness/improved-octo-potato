@@ -9,9 +9,11 @@
 <body>
 <nav id="navbar">
   <img src="../assets/homepage/rpgLogo2.png" height="75" routerLink="/homepage"/>
+  <!--
   <a routerLink="/login" id="logged">Sign-in/Up</a>
-  <a routerLink="/dashboard">Play</a>
+  <a routerLink="/dashboard">Play</a>-->
 </nav>
+<!--
 <form id="createForm">
   <input type="text" [(ngModel)]="name" name="name" placeholder="Full Name" required><br>
   <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required><br>
@@ -19,7 +21,12 @@
   <input type="password" [(ngModel)]="verifypass" name="verifypass" placeholder="Confirm Password" required><br>
   <input type="submit" value="Add a user" (click)="addUser()">
 </form>
-</body><!--
+-->
+<div *ngIf="auth.user | async as user">
+  <h3>Howdy, {{ user.displayName }}</h3>
+</div>
+
+<!--
 <script>
   if (localStorage.session == 'logged') {
     document.getElementById('logged').innerHTML = "<button>Log out</button>"
@@ -134,7 +141,8 @@
     </div>
   </div>
 </section>&ndash;&gt;
-</body>
-</html>
+
 
 -->
+</body>
+</html>

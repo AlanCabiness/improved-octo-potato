@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {AngularFirestore} from 'angularfire2/firestore';
 import {Observable} from 'rxjs/Observable';
+import { Router } from '@angular/router';
 
+import { AuthService } from '../core/auth.service';
 
 interface User {
   email: string;
@@ -31,14 +33,12 @@ interface User {
 })
 export class LoginComponent implements OnInit {
 
-  name: string;
-  email: string;
-  password: string;
-  verifypass: string;
-  user: Observable<User[]>;
-
-  constructor(private afs: AngularFirestore) {
+  constructor(public auth: AuthService,
+              private router: Router) {
   }
+
+
+
 
  /* addUser() {
     const md5 = require('md5');
@@ -80,12 +80,6 @@ export class LoginComponent implements OnInit {
 
 
   }*/
-
-  logout(): void {
-    localStorage.removeItem('session');
-    localStorage.removeItem('loggedUser');
-    localStorage.removeItem('userName');
-  }
 
   ngOnInit() {
   }
