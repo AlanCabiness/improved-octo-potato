@@ -9,6 +9,8 @@ import {LootComponent} from './loot/loot.component';
 import {TrackingComponent} from './tracking/tracking.component';
 import {CustomizationComponent} from './customization/customization.component';
 import {ApiComponent} from './api/api.component';
+import { AuthGuard } from './core/auth.guard';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/homepage', pathMatch: 'full'},
@@ -29,7 +31,8 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  declarations: []
+  declarations: [],
+  providers: []
 })
 export class AppRoutingModule {
 }

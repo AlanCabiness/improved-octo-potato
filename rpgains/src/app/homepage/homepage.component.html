@@ -2,8 +2,31 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <nav id="navbar">
   <img src="../assets/homepage/rpgLogo2.png" height="75" routerLink="/homepage"/>
-  <a routerLink="/login" id="logged">Sign-in/Up</a>
 
+  <div class="box">
+    <div *ngIf="user | async; then authenticated else notyet">
+
+    </div>
+  </div>
+
+  <!-- IF the person is not logged in yet shows this -->
+  <ng-template #notyet class="box">
+    <button (click)="signInWithGoogle()" >
+      Connect Google
+    </button>
+  </ng-template>
+
+
+  <!-- IF the person is logged in shows this -->
+  <ng-template #authenticated class="box">
+    <div *ngIf="user | async as user">
+      <h3>Howdy, {{ user.displayName }}</h3>
+      <img class="card-img-top" [src]="user.photoURL || 'https://api.adorable.io/avatars/109/fire.png'" width=50px>
+      <p class="text-truncate">UID: {{ user.uid }}</p>
+      <p class="text-truncate">UID: {{ user.xp }}</p>
+      <button class="button" (click)="logout()">Logout</button>
+    </div>
+  </ng-template>
   <a routerLink="/dashboard">Play</a>
 </nav>
 <script>
@@ -20,6 +43,10 @@
 
 <div class="bgimg-2">
   <div class="caption">
+    <div *ngIf="user | async as user">
+      <h3>Howdy, {{ user.displayName }}</h3>
+    </div>
+    <h3> Ay</h3>
     <span class="strokedHeading">ABOUT</span>
   </div>
 </div>
