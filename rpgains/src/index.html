@@ -106,7 +106,7 @@
     } else {
       $('#sign-in-or-out-button').html('Sign In/Authorize');
       $('#revoke-access-button').css('display', 'none');
-      $('#auth-status').html('You have not authorized this app or you are ' +
+      $('#auth-status').html('You have not autahorized this app or you are ' +
         'signed out.');
     }
   }
@@ -117,9 +117,19 @@
 
   function apicall() {
     var request = gapi.client.request({
-      'method': 'GET',
-      'path': 'https://www.googleapis.com/fitness/v1/users/me/dataSources/',
-      'params': {}
+      'method': 'POST',
+      'path': 'https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate',
+      'body': {
+
+      "aggregateBy": [{
+      "dataSourceId":
+        "derived:com.google.step_count.delta:com.google.android.gms:estimated_steps"
+    }],
+      "bucketByTime": { "durationMillis": 86400000 },
+      "startTimeMillis": 1528002000000,
+      "endTimeMillis": 1528084800000
+    }
+
     });
     request.execute(function(response) {
       console.log(response);
