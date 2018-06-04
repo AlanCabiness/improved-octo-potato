@@ -50,6 +50,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     AngularFirestoreModule.enablePersistence(),
     Ng2GoogleChartsModule
   ],
+  providers: [ApiComponent] ,
   bootstrap: [AppComponent]
 })
 export class AppModule {
