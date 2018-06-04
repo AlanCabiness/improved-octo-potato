@@ -165,7 +165,10 @@ ul{
   box-shadow: 0 0 50px #3D424B;
 }
 
-
+.tabgroup{
+  width: 50%;
+  margin: auto;
+}
 
 
 

@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAXsP-04H7zjgWnV0SX_YeuejKqndpdTFQ',
-    authDomain: 'angular-auth-firebase-b6f72.firebaseapp.com',
-    databaseURL: 'https://angular-auth-firebase-b6f72.firebaseio.com',
-    projectId: 'angular-auth-firebase-b6f72',
-    storageBucket: 'angular-auth-firebase-b6f72.appspot.com',
-    messagingSenderId: '298933416900'
+    apiKey: 'AIzaSyDCzGOdYSx5R37zvDGF0HrkBOWErd9Hoyo',
+    authDomain: 'rpgains-535c9.firebaseapp.com',
+    databaseURL: 'https://rpgains-535c9.firebaseio.com',
+    projectId: 'rpgains-535c9',
+    storageBucket: 'rpgains-535c9.appspot.com',
+    messagingSenderId: '24556012980'
   }
 };
