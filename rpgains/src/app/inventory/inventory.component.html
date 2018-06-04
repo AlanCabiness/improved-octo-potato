@@ -45,22 +45,40 @@
       </div>
     </div>
 
-    <div class="col-sm-7 right">
-      <nav class="navbar">
+    <div class="col-sm-7 right" *ngIf="user | async as t">
+      <mat-tab-group class="tabgroup">
+        <mat-tab label='Helmet'>
+          <div class="col-sm-3 row1" *ngFor="let helm of t.invHelm">
+            <a><img src="{{helm}}" class="img-thumbnail" (click)="equip(helm, 'helmet')"></a>
+          </div>
+        </mat-tab>
+        <mat-tab label='Armor'>
+          <div class="col-sm-3 row1" *ngFor="let armor of t.invArmor">
+            <a><img src="{{armor}}" class="img-thumbnail" (click)="equip(armor, 'armor')"></a>
+          </div>
+        </mat-tab>
+        <mat-tab label='Weapon'>
+          <div class="col-sm-3 row1" *ngFor="let weapon of t.invWeapon">
+            <a><img src="{{weapon}}" class="img-thumbnail" (click)="equip(weapon, 'weapon')"></a>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+      <!--<nav class="navbar">
         <ul *ngFor="let menu of menus"
             [class.selected]="menu === selectedMenu"
             (click)="onSelect(menu)">
           <li><a> {{menu.name}}</a></li>
         </ul>
       </nav>
-      <!--<div class="tab">-->
-      <!--<ul *ngFor="let menu of menus"-->
-      <!--[class.selected]="menu === selectedMenu"-->
-      <!--(click)="onSelect(menu)">-->
-      <!--<li> <a> {{menu.name}}</a></li>-->
+      &lt;!&ndash;<div class="tab">&ndash;&gt;
+      &lt;!&ndash;<ul *ngFor="let menu of menus"&ndash;&gt;
+      &lt;!&ndash;[class.selected]="menu === selectedMenu"&ndash;&gt;
+      &lt;!&ndash;(click)="onSelect(menu)">&ndash;&gt;
+      &lt;!&ndash;<li> <a> {{menu.name}}</a></li>&ndash;&gt;
 
-      <!--</ul>-->
-      <!--If armor is selected-->
+      &lt;!&ndash;</ul>&ndash;&gt;
+      &lt;!&ndash;If armor is selected&ndash;&gt;
       <div *ngIf="selectedMenu.name === 'Armor'">
         <h2>{{ selectedMenu.name | uppercase }} Details</h2>
         <div id="one" class="tabcontent">
@@ -151,7 +169,7 @@
           </div>
         </div>
       </div>
-      <!--If helmet is selected-->
+      &lt;!&ndash;If helmet is selected&ndash;&gt;
       <div *ngIf="selectedMenu.name === 'Helmet'">
         <h2>{{ selectedMenu.name | uppercase }} Details</h2>
         <div id="two" class="tabcontent">
@@ -242,7 +260,7 @@
 
         </div>
       </div>
-      <!--If weapon is selected-->
+      &lt;!&ndash;If weapon is selected&ndash;&gt;
       <div *ngIf="selectedMenu.name === 'Weapon'">
         <h2>{{ selectedMenu.name | uppercase }} Details</h2>
         <div id="three" class="tabcontent">
@@ -344,7 +362,7 @@
           </div>
 
         </div>
-      </div>
+      </div>-->
 
     </div>
 
