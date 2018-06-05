@@ -1,11 +1,13 @@
-import { TestBed, inject } from '@angular/core/testing';
-
-import { AuthService } from './auth.service';
+import {TestBed, inject} from '@angular/core/testing';
+import {AngularFireAuth} from 'angularfire2/auth';
+import {FirebaseApp} from 'angularfire2';
+import {AuthService} from './auth.service';
 
 describe('AuthService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AuthService]
+      imports: [],
+      providers: [AuthService, AngularFireAuth, FirebaseApp],
     });
   });
 
