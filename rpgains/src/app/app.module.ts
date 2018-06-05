@@ -23,7 +23,8 @@ import { HttpModule } from '@angular/http';
 import { CoreModule } from './core/core.module';
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
+import {MatTabsModule} from '@angular/material/tabs';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -48,7 +49,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
-    Ng2GoogleChartsModule
+    Ng2GoogleChartsModule,
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   providers: [ApiComponent] ,
   bootstrap: [AppComponent]

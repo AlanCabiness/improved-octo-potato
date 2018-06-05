@@ -35,12 +35,15 @@ a {
 }
 
 
-img {
+.loot{
   padding: 50px;
   height: 500px;
   width: 500px;
 }
 
+.token{
+  width: 20px;
+}
 
 
 
