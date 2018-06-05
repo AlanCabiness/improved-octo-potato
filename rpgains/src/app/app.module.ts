@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {HomepageComponent} from './homepage/homepage.component';
@@ -13,8 +13,8 @@ import {LoginComponent} from './login/login.component';
 import {TrackingComponent} from './tracking/tracking.component';
 import {ApiComponent} from './api/api.component';
 
-import {AngularFireModule} from 'angularfire2';
-import {AngularFirestoreModule} from 'angularfire2/firestore';
+import {AngularFireModule, FirebaseApp} from 'angularfire2';
+import {AngularFirestore, AngularFirestoreModule} from 'angularfire2/firestore';
 import {environment} from '../environments/environment';
 import {CustomizationComponent} from './customization/customization.component';
 import {Ng2GoogleChartsModule} from 'ng2-google-charts';
@@ -53,7 +53,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTabsModule,
     BrowserAnimationsModule
   ],
-  providers: [ApiComponent] ,
+  providers: [ApiComponent, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule {

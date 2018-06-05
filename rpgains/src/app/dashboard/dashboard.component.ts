@@ -5,7 +5,6 @@ import * as firebase from 'firebase';
 import {Observable} from 'rxjs/observable';
 import {User} from '../User';
 import 'rxjs-compat/add/operator/map';
-import { Player } from '../Player';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,8 +21,6 @@ export class DashboardComponent implements OnInit {
     const document$: Observable<User> = document.valueChanges();
     this.document = document$;
   }
-
-  temp = new Player();
 
   ngOnInit() {
   }

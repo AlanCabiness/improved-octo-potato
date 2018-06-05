@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Menu} from '../menu';
-import {MENUS} from '../menuItems';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 import {Observable} from 'rxjs/observable';
 import {User} from '../User';
+import {MatTabsModule} from '@angular/material';
 
 @Component({
   selector: 'app-inventory',
@@ -15,9 +14,6 @@ export class InventoryComponent implements OnInit {
   userName = localStorage.userName;
   private userDoc: AngularFirestoreDocument<User>;
   user: Observable<User>;
-  menus = MENUS;
-
-  selectedMenu: Menu;
 
 
   constructor(private afs: AngularFirestore) {
@@ -36,9 +32,5 @@ export class InventoryComponent implements OnInit {
     } else if (type === 'weapon') {
       this.afs.collection('users').doc(localStorage.userid).set({'eqWeapon': path}, {merge: true});
     }
-  }
-
-  onSelect(menu: Menu): void {
-    this.selectedMenu = menu;
   }
 }

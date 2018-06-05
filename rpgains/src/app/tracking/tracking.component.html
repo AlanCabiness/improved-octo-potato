@@ -1,4 +1,3 @@
-
 <html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,27 +34,26 @@
 </nav>
 <div class="container-fluid">
   <div class="col-sm-3 track">
-    <form #trackingForm="ngForm">
-      <!--{{diagnostic}}-->
+    <form (submit)="submitTrack()">
       <div class="form-group">
         <label for="weight">Weight</label>
-        <input type="text" class="form-control" id="weight" required [(ngModel)]="model.weight" name="weight">
+        <input type="text" class="form-control" id="weight" [(ngModel)]="formWeight" name="weight">
       </div>
       <div class="form-group">
-        <label for="bench">Bench wt.</label>
-        <input type="text" class="form-control" id="bench" required [(ngModel)]="model.bench" name="bench">
+        <label for="bench">Bench</label>
+        <input type="text" class="form-control" id="bench" [(ngModel)]="formBench" name="weight">
       </div>
       <div class="form-group">
-        <label for="squat">Squat wt.</label>
-        <input type="text" class="form-control" id="squat" required [(ngModel)]="model.squat" name="squat">
+        <label for="squat">Squat</label>
+        <input type="text" class="form-control" id="squat" [(ngModel)]="formSquat" name="weight">
       </div>
       <div class="form-group">
-        <label for="curl">Curl wt.</label>
-        <input type="text" class="form-control" id="curl" required [(ngModel)]="model.curl" name="curl">
+        <label for="curl">Curl</label>
+        <input type="text" class="form-control" id="curl" [(ngModel)]="formCurl" name="weight">
       </div>
       <div class="form-group">
-        <label for="calories">Calorie Intake</label>
-        <input type="text" class="form-control" id="calories" required [(ngModel)]="model.calories" name="calories">
+        <label for="calories">Calories</label>
+        <input type="text" class="form-control" id="calories" [(ngModel)]="formCalorie" name="weight">
       </div>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
@@ -90,9 +88,3 @@
   </div>
 </div>
 </body>
-
-<!--<ul>
-  <li *ngFor="let user of users | async">
-    <pre>{{user | json}}</pre>
-  </li>
-</ul>-->

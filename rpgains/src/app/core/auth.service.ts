@@ -5,9 +5,12 @@ import * as firebase from 'firebase/app';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 import {NotifyService} from './notify.service';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs/observable';
 import {User} from '../User';
 import 'rxjs/add/operator/switchMap';
+import {switchMap} from 'rxjs/operators';
+import {of} from 'rxjs/observable/of';
+import {auth} from 'firebase/app';
 
 /*interface User {
   uid: string;
@@ -20,34 +23,32 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class AuthService {
 
-  user: Observable<User | null>;
+  user: Observable<User>;
 
   constructor(private afAuth: AngularFireAuth,
               private afs: AngularFirestore,
               private router: Router) {
     // Getting auth data from firestore user info
-    this.user = this.afAuth.authState.switchMap(user => {
-      if (user) {
-        return this.afs.doc<User>('users/${user.uid}').valueChanges();
-      } else {
-        return Observable.of(null);
-      }
-    });
+    this.user = this.afAuth.authState.pipe(
+      switchMap(user => {
+        if (user) {
+          return this.afs.doc<User>('users/${user.uid}').valueChanges();
+        } else {
+          return of(null);
+        }
+      }));
   }
 
   googleLogin() {
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const provider = new auth.GoogleAuthProvider();
     return this.oAuthLogin(provider);
   }
 
-  private oAuthLogin(provider: firebase.auth.AuthProvider) {
+  private oAuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
-        return this.updateUserData(credential.user);
+        this.updateUserData(credential.user);
       });
-    /*
-        .catch((error) => this.handleError(error) );
-        */
   }
 
   signOut() {
@@ -63,8 +64,8 @@ export class AuthService {
   }
   */
 
-  private updateUserData(user: User) {
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+  private updateUserData(user) {
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const data: User = {
       uid: user.uid,
       email: user.email || null,
@@ -88,7 +89,7 @@ export class AuthService {
       tokens: user.tokens || 0
     };
     localStorage.userid = user.uid;
-    return userRef.set(data);
+    return userRef.set(data, {merge: true});
   }
 }
 
