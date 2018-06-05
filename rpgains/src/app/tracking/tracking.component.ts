@@ -104,11 +104,11 @@ export class TrackingComponent implements OnInit {
   submitTrack() {
     const d = new Date();
     const today = ((d.getMonth() + 1) + '/') + d.getDate() + '/' + d.getFullYear();
-    this.afs.collection('users').doc(localStorage.userid).set({'lastWeight': this.formWeight}, {merge: true});
-    this.afs.collection('users').doc(localStorage.userid).set({'lastBench': this.formBench}, {merge: true});
-    this.afs.collection('users').doc(localStorage.userid).set({'lastSquat': this.formSquat}, {merge: true});
-    this.afs.collection('users').doc(localStorage.userid).set({'lastCurl': this.formCurl}, {merge: true});
-    this.afs.collection('users').doc(localStorage.userid).set({'lastCalories': this.formCalorie}, {merge: true});
+    this.afs.collection('users').doc(localStorage.userid).set({'lastWeight': parseInt(this.formWeight, 10)}, {merge: true});
+    this.afs.collection('users').doc(localStorage.userid).set({'lastBench': parseInt(this.formBench, 10)}, {merge: true});
+    this.afs.collection('users').doc(localStorage.userid).set({'lastSquat': parseInt(this.formSquat, 10)}, {merge: true});
+    this.afs.collection('users').doc(localStorage.userid).set({'lastCurl': parseInt(this.formCurl, 10)}, {merge: true});
+    this.afs.collection('users').doc(localStorage.userid).set({'lastCalories': parseInt(this.formCalorie, 10)}, {merge: true});
     this.userManip.historyWeight[today] = parseInt(this.formWeight, 10);
     this.afs.collection('users').doc(localStorage.userid).set({'historyWeight': this.userManip.historyWeight}, {merge: true});
     this.userManip.historyBench[today] = parseInt(this.formBench, 10);
@@ -117,6 +117,8 @@ export class TrackingComponent implements OnInit {
     this.afs.collection('users').doc(localStorage.userid).set({'historyCurl': this.userManip.historyCurl}, {merge: true});
     this.userManip.historySquat[today] = parseInt(this.formSquat, 10);
     this.afs.collection('users').doc(localStorage.userid).set({'historySquat': this.userManip.historySquat}, {merge: true});
+    this.userManip.historySquat[today] = parseInt(this.formCalorie, 10);
+    this.afs.collection('users').doc(localStorage.userid).set({'historyCalories': this.userManip.historyCalories}, {merge: true});
     // alert(today);
   }
 
