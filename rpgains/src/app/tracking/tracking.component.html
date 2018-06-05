@@ -41,19 +41,19 @@
       </div>
       <div class="form-group">
         <label for="bench">Bench</label>
-        <input type="text" class="form-control" id="bench" [(ngModel)]="formBench" name="weight">
+        <input type="text" class="form-control" id="bench" [(ngModel)]="formBench" name="bench">
       </div>
       <div class="form-group">
         <label for="squat">Squat</label>
-        <input type="text" class="form-control" id="squat" [(ngModel)]="formSquat" name="weight">
+        <input type="text" class="form-control" id="squat" [(ngModel)]="formSquat" name="squat">
       </div>
       <div class="form-group">
         <label for="curl">Curl</label>
-        <input type="text" class="form-control" id="curl" [(ngModel)]="formCurl" name="weight">
+        <input type="text" class="form-control" id="curl" [(ngModel)]="formCurl" name="curl">
       </div>
       <div class="form-group">
         <label for="calories">Calories</label>
-        <input type="text" class="form-control" id="calories" [(ngModel)]="formCalorie" name="weight">
+        <input type="text" class="form-control" id="calories" [(ngModel)]="formCalorie" name="calories">
       </div>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
@@ -66,7 +66,7 @@
   <div class="col-sm-8 graph">
     <google-chart [data]="bench"></google-chart>
     <nav class="navbar">
-      <div class="nav navbar-expand-lg" id="myNavbar">
+      <div class="nav navbar-expand-lg">
         <ul id="trackNavBar" class="nav navbar-nav">
           <li><a routerLink="/tracking">Weight</a></li>
           <li><a routerLink="/tracking">Bench</a></li>
