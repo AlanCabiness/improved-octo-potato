@@ -49,28 +49,12 @@ ul{
   color: gray;
 }
 
-#one{
+.tabgroup{
   /*background-color: red;*/
   height: 1000px;
   overflow: scroll;
 }
 
-#four{
-  /*background-color: red;*/
-  height: 1000px;
-  overflow: scroll;
-}
-
-#two{
-  /*background-color: green;*/
-  height: 1000px;
-  overflow: scroll;
-}
-#three{
-  /*background-color: cyan;*/
-  height: 1000px;
-  overflow: scroll;
-}
 
 .row1{
   /*background-image: url("../../assets/helmetStock.png");*/
@@ -166,7 +150,7 @@ ul{
 }
 
 .tabgroup{
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
 
