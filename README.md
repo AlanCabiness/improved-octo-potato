@@ -17,6 +17,31 @@ Don't worry, you won't be stuck with the gray armor for long. Head on over to th
 
 ![alt text](https://i.gyazo.com/f015deb3fdf45350f59d58caa040f9ea.gif)
 
+Now, with all your new loot, head on over to the customization page, and you can equip, as in the example below.
+
+![alt text](https://i.gyazo.com/d35b9a805436a53b0dc9faf7eb387c36.gif)
+
+At the core of the token system and the tracking functionality is the tracking page. Here you enter your measurements and they will be added to your profile. There is also a graph that will show your history in 5 different categories so you can view your trends. (WORK IN PROGRESS)
+
+https://i.imgur.com/FSkQJJH.png ![alt text](https://i.imgur.com/mhIZjKq.png)
+
+Now, if we navigate back to the dashboard, we can see that the selected weapons and armor are equipped and the recent tracking information is displayed. 
+
+![alt text](https://i.imgur.com/SRKjWjP.png)
+
+That is the core functionality of RPGains, hope you try it yourself.
+Instructions to run this application yourself are as follows:
+
+<h2>How to install and run RPGains</h2>
+Getting RPGains on your local machine is not very hard. 
+You will require node, npm, and @angular/cli.
+<b>1.</b> Clone our repository (git clone https://github.com/AlanCabiness/improved-octo-potato.git) on your machine
+<b>2.</b> cd into improved-octo-potato (cd improved-octo-potato)
+<b>3.</b> cd into rpgains (cd rpgains)
+<b>4.</b> Run npm install (npm install)
+<b>5.</b> After the install completes simply serve the site (ng serve -o)
+<b>6.</b> You should have a fully functional RPGains application on your machine
+
 
 
 
