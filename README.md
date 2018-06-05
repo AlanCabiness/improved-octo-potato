@@ -6,7 +6,19 @@ After a workout, you simply log into RPGains (with your Google Account), and tra
 
 <h2><b>Simple Walkthrough of the site:</b></h2><br>
 Homepage where users can login in with Google Authentication.
+
 ![alt text](https://i.imgur.com/YD2YmM1.jpg)
+
+Once Logged in, users can click play to be sent to their personal dashboard. On this screen users will see their most recently recorded measurements on the left, and their Equipped  armor on the right side. The gray armor is the default available to users and is already equipped.
+
+![alt text](https://i.imgur.com/BLB7DyK.png)
+
+Don't worry, you won't be stuck with the gray armor for long. Head on over to the loot section, where you can spend your tokens to open our loot box. New users get 5 tokens to start and can gear up quick.
+
+![alt text](https://i.gyazo.com/f015deb3fdf45350f59d58caa040f9ea.gif)
+
+
+
 
 This project was created by Alan Cabiness, Giancarlo Cianelli, Julio Robert Giron, and Alejandro Vicuna.
 Project created as part of course CSC 360 at DePaul University
