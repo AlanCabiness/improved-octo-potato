@@ -23,7 +23,7 @@ Now, with all your new loot, head on over to the customization page, and you can
 
 At the core of the token system and the tracking functionality is the tracking page. Here you enter your measurements and they will be added to your profile. There is also a graph that will show your history in 5 different categories so you can view your trends. (WORK IN PROGRESS)
 
-https://i.imgur.com/FSkQJJH.png ![alt text](https://i.imgur.com/mhIZjKq.png)
+![alt text](https://i.imgur.com/mhIZjKq.png)
 
 Now, if we navigate back to the dashboard, we can see that the selected weapons and armor are equipped and the recent tracking information is displayed. 
 
@@ -34,7 +34,7 @@ Instructions to run this application yourself are as follows:
 
 <h2>How to install and run RPGains</h2>
 Getting RPGains on your local machine is not very hard. 
-You will require node, npm, and @angular/cli.
+You will require node, npm, and @angular/cli.<br>
 <b>1.</b> Clone our repository (git clone https://github.com/AlanCabiness/improved-octo-potato.git) on your machine <br>
 <b>2.</b> cd into improved-octo-potato (cd improved-octo-potato)<br>
 <b>3.</b> cd into rpgains (cd rpgains)<br>
