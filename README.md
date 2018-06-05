@@ -4,3 +4,4 @@ The RPGains Application was created as an aditional motivator for people who fin
 
 This project was created by Alan Cabiness, Giancarlo Cianelli, Julio Robert Giron, and Alejandro Vicuna.
 Project created as part of course CSC 360 at DePaul University
+![alt text](https://i.imgur.com/L1370b8.png)
