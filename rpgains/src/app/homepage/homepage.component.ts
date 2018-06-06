@@ -27,6 +27,13 @@ import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} 
 export class HomepageComponent implements OnInit {
 
   user: Observable<User | null>;
+  userChecker;
+  beforeLog;
+  userInvitesCollection: AngularFirestoreCollection<User>;
+  value: Observable<User[]>;
+  usersCollection:        AngularFirestoreCollection<User>;
+  users: Observable<User[]>;
+
   constructor(private afAuth: AngularFireAuth,
               private afs: AngularFirestore,
               private router: Router) {
@@ -38,7 +45,21 @@ export class HomepageComponent implements OnInit {
       }
     });
 
+    this.userInvitesCollection = this.afs.collection('users', (ref) => ref.orderBy('uid'));
   }
+
+  /*checkUserExist(user: User){
+    this.usersCollection = this.afs.collection('users', (ref) => ref.where('uid', '==', user.uid));
+    this.users = this.usersCollection.snapshotChanges().map(actions => {
+      return actions.map(action => {
+        const data = action.payload.doc().data() as User;
+        const uid = action.payload.doc.uid;
+        return{
+          uid: action.payload.doc.uid,
+        }
+      })
+    })
+  }*/
 
   googleLogin() {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -90,6 +111,11 @@ export class HomepageComponent implements OnInit {
 
   private eupdateUserData(user: User) {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+    /*this.userChecker = this.afs.doc('users/' + user.uid).valueChanges();
+    this.userChecker.map(num => num).subscribe(x => this.beforeLog = x);
+    if (this.userChecker) {
+      console.log(this.afs.doc('users/' + user.uid));
+    }*/
     const data: User = {
       uid: user.uid,
       email: user.email || null,
@@ -124,21 +150,23 @@ export class HomepageComponent implements OnInit {
       displayName: user.displayName || 'nameless user',
       photoURL: user.photoURL || 'https://goo.gl/Fz9nrQ',
       xp: user.xp || 0,
-      eqArmor: user.eqArmor || '',
-      eqHelmet: user.eqHelmet || '',
-      eqWeapon: user.eqWeapon || '',
+      eqArmor: user.eqArmor || '../../assets/armorGray.png',
+      eqHelmet: user.eqHelmet || '../../assets/helmetGray.png',
+      eqWeapon: user.eqWeapon || '../../assets/weaponGray.png',
       historyBench: user.historyBench || {},
       historyCurl: user.historyCurl || {},
       historySquat: user.historySquat || {},
       historyWeight: user.historyWeight || {},
-      invArmor: user.invArmor || [''],
-      invHelm: user.invHelm || [''],
-      invWeapon: user.invWeapon || [''],
+      historyCalories: user.historyCalories || {},
+      invArmor: user.invArmor || ['../../assets/armorGray.png'],
+      invHelm: user.invHelm || ['../../assets/helmetGray.png'],
+      invWeapon: user.invWeapon || ['../../assets/weaponGray.png'],
       lastBench: user.lastBench || 0,
       lastCurl: user.lastCurl || 0,
       lastSquat: user.lastSquat || 0,
       lastWeight: user.lastWeight || 0,
-      tokens: user.tokens || 0
+      lastCalories: user.lastCalories || 0,
+      tokens: user.tokens || 5
     };
     localStorage.userid = user.uid;
     return userRef.set(data, {merge: true});

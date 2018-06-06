@@ -9,14 +9,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {InventoryComponent} from './inventory/inventory.component';
 import {LootComponent} from './loot/loot.component';
-import {LoginComponent} from './login/login.component';
 import {TrackingComponent} from './tracking/tracking.component';
 import {ApiComponent} from './api/api.component';
 
 import {AngularFireModule, FirebaseApp} from 'angularfire2';
 import {AngularFirestore, AngularFirestoreModule} from 'angularfire2/firestore';
 import {environment} from '../environments/environment';
-import {CustomizationComponent} from './customization/customization.component';
 import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 
 import { HttpModule } from '@angular/http';
@@ -34,9 +32,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     DashboardComponent,
     InventoryComponent,
     LootComponent,
-    LoginComponent,
     TrackingComponent,
-    CustomizationComponent,
     ApiComponent
   ],
   imports: [

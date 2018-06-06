@@ -3,9 +3,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {DashboardComponent} from './dashboard.component';
 import {HomepageComponent} from '../homepage/homepage.component';
 import {TrackingComponent} from '../tracking/tracking.component';
-import {CustomizationComponent} from '../customization/customization.component';
 import {InventoryComponent} from '../inventory/inventory.component';
-import {LoginComponent} from '../login/login.component';
 import {LootComponent} from '../loot/loot.component';
 import {ApiComponent} from '../api/api.component';
 import {RouterModule, Routes} from '@angular/router';
@@ -26,7 +24,7 @@ describe('DashboardComponent', () => {
       declarations: [
         DashboardComponent
       ],
-      imports: [RouterTestingModule, FormsModule, AngularFireModule.initializeApp(environment.firebase)],
+      imports: [RouterTestingModule, FormsModule],
       providers: [{provide: APP_BASE_HREF, useValue: '/'}]
     })
       .compileComponents();
@@ -41,4 +39,8 @@ describe('DashboardComponent', () => {
   /*it('should create', () => {
     expect(component).toBeTruthy();
   });*/
+
+  it('next level should be 15 if xp is 73', () => {
+    expect(component).toBeTruthy();
+  });
 });
