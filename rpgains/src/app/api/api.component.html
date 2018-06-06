@@ -7,8 +7,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script async defer src="https://apis.google.com/js/api.js"></script>
+
 </head>
-<body onload="handleClientLoad()">
+<body>
 <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-left">
@@ -28,25 +29,17 @@
 </nav>
 
 
-
-<div id="auth-status" style="display: inline; padding-left: 25px"></div><hr>
-
-
-
 <h3>Google Fit</h3>
-<!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
-
+<div id="auth-status" style="display: inline; padding-left: 25px"></div><hr>
+<div id="name" style="display:inline; padding-left: 25px"></div>
 <div>
   <button id="sign-in-or-out-button"
-          style="margin-left: 25px" onclick="handleAuthClick()">Sign In/Authorize</button>
+          style="margin-left: 25px" onclick="handleClientLoad(); handleAuthClick()">Sign In/Authorize</button>
   <button id="revoke-access-button"
-          style="display: inline-block; margin-left: 25px"onclick="revokeAccess()">Revoke access</button>
-  <button id="api-call"(click)="clear(); showConfig();">get</button>
-  <button (click)="clear()">clear</button>
-  <span *ngIf="config">
-    Mock JSON Data: {{config.Steps}} steps achieved.
-  </span>
+          style="display: inline-block; margin-left: 25px"onclick="revokeAccess()">Revoke Access</button>
+  <button id="api-call"onclick="getLast24Hours()"></button>
+
+  <h3 id="estimated-steps"></h3>
 </div>
-<p *ngIf="error" class="error">{{error | json}}</p>
 </body>
 </html>

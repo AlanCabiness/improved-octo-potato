@@ -16,6 +16,7 @@ import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} 
   displayName: string;
 }*/
 
+//
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -25,7 +26,6 @@ import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} 
 
 export class HomepageComponent implements OnInit {
 
-
   user: Observable<User | null>;
   userChecker;
   beforeLog;
@@ -33,7 +33,6 @@ export class HomepageComponent implements OnInit {
   value: Observable<User[]>;
   usersCollection:        AngularFirestoreCollection<User>;
   users: Observable<User[]>;
-
 
   constructor(private afAuth: AngularFireAuth,
               private afs: AngularFirestore,
@@ -64,7 +63,12 @@ export class HomepageComponent implements OnInit {
 
   googleLogin() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    return this.oAuthLogin(provider);
+    return this.newUser(provider);
+  }
+
+  egoogleLogin() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    return this.existingUser(provider);
   }
 
   logout() {
@@ -77,7 +81,19 @@ export class HomepageComponent implements OnInit {
     });
   }
 
-  private oAuthLogin(provider: firebase.auth.AuthProvider) {
+
+  signInWithGoogle() {
+    this.googleLogin()
+      .then(() => this.afterSignIn());
+  }
+
+  esignInWithGoogle() {
+    this.egoogleLogin()
+      .then(() => this.afterSignIn());
+  }
+
+
+  private newUser(provider: firebase.auth.AuthProvider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
         return this.updateUserData(credential.user);
@@ -85,18 +101,49 @@ export class HomepageComponent implements OnInit {
       .catch((error) => console.log(error));
   }
 
-  signInWithGoogle() {
-    this.googleLogin()
-      .then(() => this.afterSignIn());
+  private existingUser(provider: firebase.auth.AuthProvider) {
+    return this.afAuth.auth.signInWithPopup(provider)
+      .then((credential) => {
+        return this.eupdateUserData(credential.user);
+      })
+      .catch((error) => console.log(error));
   }
 
-  private updateUserData(user: User) {
+  private eupdateUserData(user: User) {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
     /*this.userChecker = this.afs.doc('users/' + user.uid).valueChanges();
     this.userChecker.map(num => num).subscribe(x => this.beforeLog = x);
     if (this.userChecker) {
       console.log(this.afs.doc('users/' + user.uid));
     }*/
+    const data: User = {
+      uid: user.uid,
+      email: user.email || null,
+      displayName: user.displayName || 'nameless user',
+      photoURL: user.photoURL || 'https://goo.gl/Fz9nrQ',
+      xp: user.xp || user.xp,
+      eqArmor: user.eqArmor || user.eqArmor,
+      eqHelmet: user.eqHelmet || user.eqHelmet,
+      eqWeapon: user.eqWeapon || user.eqWeapon,
+      historyBench: user.historyBench || user.historyBench,
+      historyCurl: user.historyCurl || user.historyCurl,
+      historySquat: user.historySquat || user.historySquat,
+      historyWeight: user.historyWeight || user.historyWeight,
+      invArmor: user.invArmor || user.invArmor,
+      invHelm: user.invHelm || user.invHelm,
+      invWeapon: user.invWeapon || user.invWeapon ,
+      lastBench: user.lastBench || user.lastBench,
+      lastCurl: user.lastCurl || user.lastCurl,
+      lastSquat: user.lastSquat || user.lastSquat,
+      lastWeight: user.lastWeight || user.lastWeight,
+      tokens: user.tokens || user.tokens
+    };
+    localStorage.userid = user.uid;
+    return userRef.set(data);
+  }
+  private updateUserData(user) {
+
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const data: User = {
       uid: user.uid,
       email: user.email || null,
@@ -122,8 +169,9 @@ export class HomepageComponent implements OnInit {
       tokens: user.tokens || 5
     };
     localStorage.userid = user.uid;
-    return userRef.set(data);
+    return userRef.set(data, {merge: true});
   }
+
 
   private afterSignIn() {
     // Do after login stuff here, such router redirects, toast messages, etc.

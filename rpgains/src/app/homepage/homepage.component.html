@@ -11,8 +11,11 @@
 
   <!-- IF the person is not logged in yet shows this -->
   <ng-template #notyet class="box">
-    <button (click)="signInWithGoogle()">
-      Connect Google
+    <button (click)="signInWithGoogle()" >
+      New User
+    </button>
+    <button (click)="esignInWithGoogle()" >
+      Existing User
     </button>
   </ng-template>
 
