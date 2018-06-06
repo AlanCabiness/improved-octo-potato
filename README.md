@@ -1,4 +1,4 @@
-<h2>How to install and run RPGains</h2>
+<h1>How to install and run RPGains</h1>
 Getting RPGains on your local machine is not very hard. 
 You will require node, npm, and @angular/cli.<br>
 <b>1.</b> Clone our repository (git clone https://github.com/AlanCabiness/improved-octo-potato.git) on your machine <br>
@@ -8,7 +8,7 @@ You will require node, npm, and @angular/cli.<br>
 <b>5.</b> After the install completes simply serve the site (ng serve -o)<br>
 <b>6.</b> You should have a fully functional RPGains application on your machine <br>
 
-# improved-octo-potato
+# RPGains
 RPGains was created for one reason. To help you get fit. We know that motivation can be one of the hardest parts of going to the gym and repeatedly going back. What we've set out to do is create another reason for you to go to the gym, track your fitness, and reach your goals. RPGains is a game-based aide to your workout. It provides a simple way to track your workout, progress, and goals, and rewards you for your persistence. By giving incentives for going to gym, as well as meeting your calorie goals, and increasing your strength training, users may strive towards a healthier lifestyle, and a stronger body.
 
 After a workout, you simply log into RPGains (with your Google Account), and track your exercise. We know that just making it to the gym can the most impactful on your health, and we reward your character with  half of the daily maximum experience points for doing so. We also want to help you track your weight lost, weight lifted, and calories consumed so when those numbers improve from your last check-in, we reward with extra experience points. Each time you work out, you gain a token for our loot box system so you can equip your character with the finest equipment. We also have bonuses for Google Fit users, and when they take 10,000 or more steps in a single day, they can earn some extra tokens.
@@ -44,7 +44,7 @@ Instructions to run this application yourself are as follows:
 
 
 
-<h2>Google Fit Dashboard</h2>
+<h1>Google Fit Dashboard</h1>
 Following are some screens shwoing the functionality of the Google Fit user dahsboard, where users can get they Google Fit step data in the RPGains application.
 
 ![alt text](https://i.imgur.com/XowoBL9.png)
