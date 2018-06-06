@@ -35,48 +35,41 @@ export class TrackingComponent implements OnInit {
 
   }
 
-  /*trace1 = {
-    x: this.userManip.historyWeight.keys(),
-    y: this.userManip.historyWeight.values(),
-    type: 'scatter'
-  };*/
-  // get all keys as x var
-  // sortedKeys = Object.keys(this.userManip.historyWeight).sort();
-  /*weight = {
+  weight = {
     chartType: 'LineChart',
     dataTable: [
       ['Date', 'Pounds'],
-      [this.userManip.historyWeight[0], this.userManip.historyWeight[this.sortedKeys[0]]],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['03/01/2018', 315],
+      ['04/01/2018', 275],
+      ['05/1/2018', 268],
+      ['05/25/2018', 261],
+      ['06/05/2018', 260]
     ],
     options: {'title': 'Weight'},
-  };*/
+  };
 
   bench = {
     chartType: 'LineChart',
     dataTable: [
-      ['Task', 'Hours per Day'],
-      ['Work', 11],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['Date', 'Pounds'],
+      ['03/01/2018', 25],
+      ['04/01/2018', 40],
+      ['05/1/2018', 50],
+      ['05/25/2018', 85],
+      ['06/05/2018', 100]
     ],
-    options: {'title': 'Tasks'},
+    options: {'title': 'Bench'},
   };
 
   curl = {
     chartType: 'LineChart',
     dataTable: [
-      [, 'litable'],
-      // [this.userManip.historyCurl[Object.keys(this.userManip.historyCurl)[0]], 31],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['Date', 'Pounds'],
+      ['03/01/2018', 25],
+      ['04/01/2018', 35],
+      ['05/1/2018', 50],
+      ['05/25/2018', 55],
+      ['06/05/2018', 60]
     ],
     options: {'title': 'Curl'},
   };
@@ -84,27 +77,27 @@ export class TrackingComponent implements OnInit {
   squat = {
     chartType: 'LineChart',
     dataTable: [
-      ['Task', 'Hours per Day'],
-      ['Work', 31],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['Date', 'Pounds'],
+      ['03/01/2018', 80],
+      ['04/01/2018', 120],
+      ['05/1/2018', 150],
+      ['05/25/2018', 175],
+      ['06/05/2018', 200]
     ],
-    options: {'title': 'Tasks'},
+    options: {'title': 'Squat'},
   };
 
   calorie = {
     chartType: 'LineChart',
     dataTable: [
-      ['Task', 'Hours per Day'],
-      ['Work', 31],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['Date', 'Pounds'],
+      ['03/01/2018', 1500],
+      ['04/01/2018', 1900],
+      ['05/1/2018', 1200],
+      ['05/25/2018', 1500],
+      ['06/05/2018', 1600]
     ],
-    options: {'title': 'Tasks'},
+    options: {'title': 'Calories'},
   };
 
   submitTrack() {
