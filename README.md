@@ -25,9 +25,9 @@ At the core of the token system and the tracking functionality is the tracking p
 
 ![alt text](https://i.imgur.com/mhIZjKq.png)
 
-Now, if we navigate back to the dashboard, we can see that the selected weapons and armor are equipped and the recent tracking information is displayed. 
+Now, if we navigate back to the dashboard, we can see that the selected weapons and armor are equipped and the recent tracking information is displayed. You will also see that you have leveled up and have made progress towards your next level up on the progress bar.
 
-![alt text](https://i.imgur.com/SRKjWjP.png)
+![alt text](https://i.imgur.com/zZDeDpT.png)
 
 That is the core functionality of RPGains, hope you try it yourself.
 Instructions to run this application yourself are as follows:
