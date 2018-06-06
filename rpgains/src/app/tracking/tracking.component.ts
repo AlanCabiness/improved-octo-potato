@@ -24,6 +24,7 @@ export class TrackingComponent implements OnInit {
   formSquat;
   formCurl;
   formCalorie;
+  prevxp;
 
   constructor(private afs: AngularFirestore) {
     this.userDoc = afs.doc('users/' + localStorage.userid);
@@ -34,43 +35,41 @@ export class TrackingComponent implements OnInit {
 
   }
 
-  // get all keys as x var
-  // sortedKeys = Object.keys(this.userManip.historyWeight).sort();
-  /*weight = {
+  weight = {
     chartType: 'LineChart',
     dataTable: [
       ['Date', 'Pounds'],
-      [this.userManip.historyWeight[0], this.userManip.historyWeight[this.sortedKeys[0]]],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['03/01/2018', 315],
+      ['04/01/2018', 275],
+      ['05/1/2018', 268],
+      ['05/25/2018', 261],
+      ['06/05/2018', 260]
     ],
     options: {'title': 'Weight'},
-  };*/
+  };
 
   bench = {
     chartType: 'LineChart',
     dataTable: [
-      ['Task', 'Hours per Day'],
-      ['Work', 11],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['Date', 'Pounds'],
+      ['03/01/2018', 25],
+      ['04/01/2018', 40],
+      ['05/1/2018', 50],
+      ['05/25/2018', 85],
+      ['06/05/2018', 100]
     ],
-    options: {'title': 'Tasks'},
+    options: {'title': 'Bench'},
   };
 
   curl = {
     chartType: 'LineChart',
     dataTable: [
-      [, 'litable'],
-      // [this.userManip.historyCurl[Object.keys(this.userManip.historyCurl)[0]], 31],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['Date', 'Pounds'],
+      ['03/01/2018', 25],
+      ['04/01/2018', 35],
+      ['05/1/2018', 50],
+      ['05/25/2018', 55],
+      ['06/05/2018', 60]
     ],
     options: {'title': 'Curl'},
   };
@@ -78,36 +77,53 @@ export class TrackingComponent implements OnInit {
   squat = {
     chartType: 'LineChart',
     dataTable: [
-      ['Task', 'Hours per Day'],
-      ['Work', 31],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['Date', 'Pounds'],
+      ['03/01/2018', 80],
+      ['04/01/2018', 120],
+      ['05/1/2018', 150],
+      ['05/25/2018', 175],
+      ['06/05/2018', 200]
     ],
-    options: {'title': 'Tasks'},
+    options: {'title': 'Squat'},
   };
 
   calorie = {
     chartType: 'LineChart',
     dataTable: [
-      ['Task', 'Hours per Day'],
-      ['Work', 31],
-      ['Eat', 2],
-      ['Commute', 2],
-      ['Watch TV', 2],
-      ['Sleep', 7]
+      ['Date', 'Pounds'],
+      ['03/01/2018', 1500],
+      ['04/01/2018', 1900],
+      ['05/1/2018', 1200],
+      ['05/25/2018', 1500],
+      ['06/05/2018', 1600]
     ],
-    options: {'title': 'Tasks'},
+    options: {'title': 'Calories'},
   };
 
   submitTrack() {
+    // console.log(this.userManip.historyWeight.keys());
+    let xpGained = 5;
     const d = new Date();
     const today = ((d.getMonth() + 1) + '/') + d.getDate() + '/' + d.getFullYear();
+    if (parseInt(this.formWeight, 10) < this.userManip.lastWeight) {
+      xpGained++;
+    }
     this.afs.collection('users').doc(localStorage.userid).set({'lastWeight': parseInt(this.formWeight, 10)}, {merge: true});
+    if (parseInt(this.formBench, 10) > this.userManip.lastBench) {
+      xpGained++;
+    }
     this.afs.collection('users').doc(localStorage.userid).set({'lastBench': parseInt(this.formBench, 10)}, {merge: true});
+    if (parseInt(this.formSquat, 10) > this.userManip.lastSquat) {
+      xpGained++;
+    }
     this.afs.collection('users').doc(localStorage.userid).set({'lastSquat': parseInt(this.formSquat, 10)}, {merge: true});
+    if (parseInt(this.formCurl, 10) > this.userManip.lastCurl) {
+      xpGained++;
+    }
     this.afs.collection('users').doc(localStorage.userid).set({'lastCurl': parseInt(this.formCurl, 10)}, {merge: true});
+    if (parseInt(this.formCalorie, 10) < 2000) {
+      xpGained++;
+    }
     this.afs.collection('users').doc(localStorage.userid).set({'lastCalories': parseInt(this.formCalorie, 10)}, {merge: true});
     this.userManip.historyWeight[today] = parseInt(this.formWeight, 10);
     this.afs.collection('users').doc(localStorage.userid).set({'historyWeight': this.userManip.historyWeight}, {merge: true});
@@ -117,8 +133,16 @@ export class TrackingComponent implements OnInit {
     this.afs.collection('users').doc(localStorage.userid).set({'historyCurl': this.userManip.historyCurl}, {merge: true});
     this.userManip.historySquat[today] = parseInt(this.formSquat, 10);
     this.afs.collection('users').doc(localStorage.userid).set({'historySquat': this.userManip.historySquat}, {merge: true});
-    this.userManip.historySquat[today] = parseInt(this.formCalorie, 10);
+    this.userManip.historyCalories[today] = parseInt(this.formCalorie, 10);
     this.afs.collection('users').doc(localStorage.userid).set({'historyCalories': this.userManip.historyCalories}, {merge: true});
+    this.prevxp = this.userManip.xp;
+    this.userManip.xp = this.userManip.xp + xpGained;
+    if (Math.floor((this.userManip.xp / 5) + 1) - Math.floor((this.prevxp / 5) + 1) === 1) {
+      this.afs.collection('users').doc(localStorage.userid).set({'tokens': this.userManip.tokens + 1}, {merge: true});
+    } else if (Math.floor((this.userManip.xp / 5) + 1) - Math.floor((this.prevxp / 5) + 1) === 2) {
+      this.afs.collection('users').doc(localStorage.userid).set({'tokens': this.userManip.tokens + 2}, {merge: true});
+    }
+    this.afs.collection('users').doc(localStorage.userid).set({'xp': this.userManip.xp}, {merge: true});
     // alert(today);
   }
 

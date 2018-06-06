@@ -63,20 +63,34 @@
 
   </div>
 
-  <div class="col-sm-8 graph">
-    <google-chart [data]="bench"></google-chart>
-    <nav class="navbar">
-      <div class="nav navbar-expand-lg">
-        <ul id="trackNavBar" class="nav navbar-nav">
-          <li><a routerLink="/tracking">Weight</a></li>
-          <li><a routerLink="/tracking">Bench</a></li>
-          <li><a routerLink="/tracking">Squat</a></li>
-          <li><a routerLink="/tracking">Curl</a></li>
-          <li><a routerLink="/tracking">Calorie Intake</a></li>
-        </ul>
+  <mat-tab-group class="tabgroup">
+    <mat-tab label="Weight">
+      <div class="col-sm-8 graph">
+        <google-chart [data]="weight"></google-chart>
       </div>
-    </nav>
-  </div>
+    </mat-tab>
+    <mat-tab label="Bench">
+      <div class="col-sm-8 graph">
+        <google-chart [data]="bench"></google-chart>
+      </div>
+    </mat-tab>
+    <mat-tab label="Squat">
+      <div class="col-sm-8 graph">
+        <google-chart [data]="squat"></google-chart>
+      </div>
+    </mat-tab>
+    <mat-tab label="Curl">
+      <div class="col-sm-8 graph">
+        <google-chart [data]="curl"></google-chart>
+      </div>
+    </mat-tab>
+    <mat-tab label="Calories">
+      <div class="col-sm-8 graph">
+        <google-chart [data]="calorie"></google-chart>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
 </div>
 
 <div class="container-fluid">

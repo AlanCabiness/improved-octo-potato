@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="ed533e57-bb1d-442d-ae9d-b2ca3a1a5c11" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpgains/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rpgains/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpgains/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rpgains/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpgains/src/app/api/api.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rpgains/src/app/api/api.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpgains/src/assets/javascript/gFitApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/rpgains/src/assets/javascript/gFitApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpgains/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/rpgains/src/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,36 +19,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="216">
+              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gFitApi.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gFitApi.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rpgains/src/assets/javascript/gFitApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-729">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.component.spec.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.spec.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#73#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="347">
+              <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -76,8 +73,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rpgains/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+            <state relative-caret-position="96">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -96,15 +93,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpgains/src/app/app.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -157,25 +145,22 @@
       <list>
         <option value="$PROJECT_DIR$/rpgains/src/tsconfig.app.json" />
         <option value="$PROJECT_DIR$/rpgains/src/services/mongoService.ts" />
-        <option value="$PROJECT_DIR$/rpgains/src/app/dashboard/dashboard.component.ts" />
         <option value="$PROJECT_DIR$/rpgains/src/app/mongo.service.ts" />
         <option value="$PROJECT_DIR$/rpgains/src/app/homepage/homepage.component.css" />
-        <option value="$PROJECT_DIR$/rpgains/src/app/homepage/homepage.component.ts" />
         <option value="$PROJECT_DIR$/rpgains/src/app/login/login.component.ts" />
         <option value="$PROJECT_DIR$/rpgains/src/styles.css" />
         <option value="$PROJECT_DIR$/rpgains/src/services/mongoService.js" />
-        <option value="$PROJECT_DIR$/rpgains/src/app/dashboard/dashboard.component.css" />
         <option value="$PROJECT_DIR$/rpgains/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/rpgains/src/app/track.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/rpgains/src/app/tracking/tracking.component.css" />
-        <option value="$PROJECT_DIR$/rpgains/src/app/tracking/tracking.component.ts" />
         <option value="$PROJECT_DIR$/rpgains/src/environments/environment.ts" />
         <option value="$PROJECT_DIR$/rpgains/src/app/login/login.component.html" />
         <option value="$PROJECT_DIR$/rpgains/src/app/login/login.component.css" />
         <option value="$PROJECT_DIR$/yee.json" />
         <option value="$PROJECT_DIR$/rpgains/src/app/customization/customization.component.spec.ts" />
         <option value="$PROJECT_DIR$/rpgains/src/app/customization/customization.js" />
+
         <option value="$PROJECT_DIR$/rpgains/src/app/dashboard/dashboard.component.html" />
         <option value="$PROJECT_DIR$/rpgains/src/app/tracking/tracking.component.html" />
         <option value="$PROJECT_DIR$/rpgains/src/app/customization/customization.component.css" />
@@ -196,8 +181,8 @@
         <option value="$PROJECT_DIR$/rpgains/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/rpgains/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/rpgains/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/rpgains/src/app/api/api.component.html" />
         <option value="$PROJECT_DIR$/rpgains/src/index.html" />
+        <option value="$PROJECT_DIR$/rpgains/src/app/api/api.component.html" />
         <option value="$PROJECT_DIR$/rpgains/src/assets/javascript/gFitApi.js" />
       </list>
     </option>
@@ -209,6 +194,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
     <handled-path value="$PROJECT_DIR$/rpgains/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
@@ -216,9 +202,11 @@
       <path value="$PROJECT_DIR$/rpgains/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1350" />
+    <option name="y" value="101" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -256,7 +244,31 @@
               <item name="rpgains" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="improved-octo-potato" type="b2602c69:ProjectViewProjectNode" />
+              <item name="improved-octo-potato" type="462c0819:PsiDirectoryNode" />
+              <item name="rpgains" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="improved-octo-potato" type="b2602c69:ProjectViewProjectNode" />
+              <item name="improved-octo-potato" type="462c0819:PsiDirectoryNode" />
+              <item name="rpgains" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="loot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="improved-octo-potato" type="b2602c69:ProjectViewProjectNode" />
+              <item name="improved-octo-potato" type="462c0819:PsiDirectoryNode" />
+              <item name="rpgains" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="tracking" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="improved-octo-potato" type="b2602c69:ProjectViewProjectNode" />
@@ -281,7 +293,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;term&#9;ACTION&#9;ActivateTerminalToolWindow&#10;hom&#9;FILE&#9;file://C:/Users/acab1/Documents/DePaul Junior 3/CSC 360/improved-octo-potato/rpgains/src/app/homepage/homepage.component.html" />
+    <property name="SearchEverywhereHistoryKey" value="term&#9;ACTION&#9;ActivateTerminalToolWindow&#10;temr&#9;null&#9;null&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;hom&#9;FILE&#9;file://C:/Users/acab1/Documents/DePaul Junior 3/CSC 360/improved-octo-potato/rpgains/src/app/homepage/homepage.component.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rpgains" />
     <property name="node.js.detected.package.prettier" value="true" />
@@ -348,7 +360,7 @@
       <workItem from="1528150661379" duration="2239000" />
       <workItem from="1528156304591" duration="2627000" />
       <workItem from="1528164881456" duration="17880000" />
-      <workItem from="1528223148736" duration="6479000" />
+      <workItem from="1528223148736" duration="11020000" />
     </task>
     <task id="LOCAL-00001" summary="working on track">
       <created>1525804689114</created>
@@ -399,11 +411,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528230013805</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Error handling for users without data has been implemented.&#10;- Rest API test frameworks imported.">
+      <created>1528244295343</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1528244295343</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65749000" />
+    <option name="totallyTimeSpent" value="70290000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,9 +445,8 @@
       <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32863188" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.056417488" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28725702" />
-      <window_info id="Favorites" order="2" sideWeight="0.50070524" side_tool="true" weight="0.18347895" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" sideWeight="0.50070524" side_tool="true" weight="0.18347895" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -471,20 +489,11 @@
     <MESSAGE value="doing firebase stuff. kinda all over the place right now" />
     <MESSAGE value="- Added functionality to connect to Google Fit api and print data sources to console." />
     <MESSAGE value="- Google Fit api call fetches your step data from June 3rd and displays to the console.&#10;- Page needs a refresh for the processes to run for now." />
-    <MESSAGE value="Merge branch 'master' of https://github.com/AlanCabiness/improved-octo-potato into guzy&#10;&#10;# Conflicts:&#10;#&#9;rpgains/src/index.html" />
-    <MESSAGE value="- Updated to the most recent version of api functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Updated to the most recent version of api functionality" />
+    <MESSAGE value="tracking hotfix" />
+    <MESSAGE value="Progress bar done, tracking gives xp between 5-10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Progress bar done, tracking gives xp between 5-10" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/mongo.service.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/mongo.service.ts" />
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/homepage/homepage.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpgains/src/tsconfig.app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -527,13 +536,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/track.ts">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/environments/environment.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="253">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/track.ts" />
     <entry file="file://$PROJECT_DIR$/yee.json" />
     <entry file="file://$PROJECT_DIR$/rpgains/src/app/customization/customization.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -549,31 +559,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/tracking/tracking.component.ts">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/app.component.ts">
+    <MESSAGE value="Merge branch 'master' of https://github.com/AlanCabiness/improved-octo-potato into guzy&#10;&#10;# Conflicts:&#10;#&#9;rpgains/src/index.html" />
+    <MESSAGE value="- Updated to the most recent version of api functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Updated to the most recent version of api functionality" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/mongo.service.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/mongo.service.ts" />
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/homepage/homepage.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/dashboard/dashboard.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/dashboard/dashboard.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/tracking/tracking.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="184">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -584,7 +581,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/customization/customization.component.ts">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/homepage/homepage.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
@@ -595,13 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="637">
           <caret line="131" column="13" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/loot/loot.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -619,36 +609,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/login/login.component.css">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/services/mongoService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/login/login.component.ts">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/track.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-376">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/assets/config.json">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/yee.json" />
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/customization/customization.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/tracking/tracking.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/dashboard/dashboard.component.css">
+
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/homepage/homepage.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="99" column="47" lean-forward="true" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/core/auth.service.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/homepage/homepage.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#googleLogin#0;n#HomepageComponent#0" />
+            <element signature="n#!!block;n#logout#0;n#HomepageComponent#0" />
+            <element signature="n#!!block;n#signOut#0;n#HomepageComponent#0" />
+            <element signature="n#!!block;n#oAuthLogin#0;n#HomepageComponent#0" />
+            <element signature="n#!!block;n#signInWithGoogle#0;n#HomepageComponent#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/loot/loot.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="2" selection-end-line="23" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/tracking/tracking.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/User.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/tracking/tracking.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/loot/loot.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/inventory/inventory.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rpgains/src/app/dashboard/dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -687,7 +811,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.ts">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/dashboard/dashboard.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
@@ -749,10 +873,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/index.html">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/assets/javascript/getObject.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -763,38 +897,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/assets/javascript/getObject.js">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="96">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.spec.ts">
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        <state relative-caret-position="195">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/loot/loot.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
           <folding>
-            <element signature="e#0#73#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rpgains/src/assets/javascript/gFitApi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-729">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpgains/src/app/api/api.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="347">
+          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
         </state>
       </provider>
     </entry>

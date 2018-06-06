@@ -36,17 +36,19 @@ export interface User {
   historyCurl: {};
   historySquat: {};
   historyWeight: {};
+  historyCalories: {};
   invArmor: [string];
   invHelm: [string];
   invWeapon: [string];
   lastBench: number;
-  lastCurl?: number;
-  lastSquat?: number;
-  lastWeight?: number;
-  xp?: number;
-  email?: string | null;
-  photoURL?: string;
-  displayName?: string;
+  lastCurl: number;
+  lastSquat: number;
+  lastWeight: number;
+  lastCalories: number;
+  xp: number;
+  email: string | null;
+  photoURL: string;
+  displayName: string;
   tokens: number;
 }
 
