@@ -34,7 +34,11 @@ export class TrackingComponent implements OnInit {
 
 
   }
-
+/*
+* Due to issues with asynchronous operations, we were unable to get live data on the charts.
+* The charts would not initialize if the asynchronous calls did not complete, which halted us from having proper
+* data visualization. We know the code that would easily make the charts work if not for our issues with observables.
+* */
   weight = {
     chartType: 'LineChart',
     dataTable: [

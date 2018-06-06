@@ -36,8 +36,8 @@ export class HomepageComponent implements OnInit {
   today;
 
   constructor(private afAuth: AngularFireAuth,
-              private afs: AngularFirestore,
-              private router: Router) {
+              private router: Router,
+              private afs: AngularFirestore) {
     this.user = this.afAuth.authState.switchMap((user) => {
       if (user) {
         return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
@@ -45,8 +45,6 @@ export class HomepageComponent implements OnInit {
         return Observable.of(null);
       }
     });
-
-    this.userInvitesCollection = this.afs.collection('users', (ref) => ref.orderBy('uid'));
   }
 
   /*checkUserExist(user: User){
