@@ -24,4 +24,41 @@ describe('InventoryComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // Wanted to test if showed properly obtained items
+  //
+  // it('armor inventory is correct',  () => {
+  //   expect(component.Armorinventory).toEqual( User = {
+  //      user.invArmor
+  //
+  // });
+
+  // it('helmet inventory is correct',  () => {
+  //   expect(component.Helmetinventory).toEqual( User = {
+  //      user.invArmor
+  //
+  // });
+
+  // it('weapon inventory is correct',  () => {
+  //   expect(component.Weaponinventory).toEqual( User = {
+  //      user.invArmor
+  //
+  // });
+
+  // Wanted to test if items were equipped properly
+  //
+  // it('selected armor got equipped',  () => {
+  //   component.onArmorButtonClick();
+  //        expect(user.eqArmor).toEqual(selectedArmor);
+  //     });
+
+  // it('selected helmet got equipped',  () => {
+  //   component.onHelmetButtonClick();
+  //        expect(user.eqHelmet).toEqual(selectedHelmet);
+  //     });
+
+  // it('selected weapon got equipped',  () => {
+  //   component.onWeaponButtonClick();
+  //        expect(user.eqWeapon).toEqual(selectedWeapon);
+  //     });
 });

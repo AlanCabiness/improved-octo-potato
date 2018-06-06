@@ -22,4 +22,26 @@ describe('TrackingComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // Wanted to test if submitted tracking records were being recorded
+  //
+  // it('weight was recorded',  () => {
+  //    expect(user.lastWeight).toEqual(component.submittedWeight);
+  //     });
+
+  // it('squat was recorded',  () => {
+  //    expect(user.lastSquat).toEqual(component.submittedSquat);
+  //     });
+
+  // it('bench was recorded',  () => {
+  //    expect(user.lastWeight).toEqual(component.submittedbench);
+  //     });
+
+  // it('curl was recorded',  () => {
+  //    expect(user.lastCurl).toEqual(component.submittedCurl);
+  //     });
+
+  // it('calorie was recorded',  () => {
+  //    expect(user.lastCalorie).toEqual(component.submittedCalorie);
+  //     });
 });
