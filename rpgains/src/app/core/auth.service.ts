@@ -72,21 +72,23 @@ export class AuthService {
       displayName: user.displayName || 'nameless user',
       photoURL: user.photoURL || 'https://goo.gl/Fz9nrQ',
       xp: user.xp || 0,
-      eqArmor: user.eqArmor || '',
-      eqHelmet: user.eqHelmet || '',
-      eqWeapon: user.eqWeapon || '',
+      eqArmor: user.eqArmor || '../../assets/armorGray.png',
+      eqHelmet: user.eqHelmet || '../../assets/helmetGray.png',
+      eqWeapon: user.eqWeapon || '../../assets/weaponGray.png',
       historyBench: user.historyBench || {},
       historyCurl: user.historyCurl || {},
       historySquat: user.historySquat || {},
       historyWeight: user.historyWeight || {},
-      invArmor: user.invArmor || [''],
-      invHelm: user.invHelm || [''],
-      invWeapon: user.invWeapon || [''],
+      historyCalories: user.historyCalories || {},
+      invArmor: user.invArmor || ['../../assets/armorGray.png'],
+      invHelm: user.invHelm || ['../../assets/helmetGray.png'],
+      invWeapon: user.invWeapon || ['../../assets/weaponGray.png'],
       lastBench: user.lastBench || 0,
       lastCurl: user.lastCurl || 0,
       lastSquat: user.lastSquat || 0,
       lastWeight: user.lastWeight || 0,
-      tokens: user.tokens || 0
+      lastCalories: user.lastCalories || 0,
+      tokens: user.tokens || 5
     };
     localStorage.userid = user.uid;
     return userRef.set(data, {merge: true});

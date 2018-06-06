@@ -32,7 +32,7 @@
     <div class="col-sm-1 blank"></div>
     <div class="col-sm-2 sidenavL" *ngIf="document | async as t">
       <p>Weight {{t.lastWeight}}</p>
-      <p>Calorie Intake 2000</p>
+      <p>Calorie {{t.lastCalories}}</p>
       <p>Squat {{t.lastSquat}}</p>
       <p>Bench {{t.lastBench}}</p>
       <p>Curl {{t.lastCurl}}</p>
@@ -62,18 +62,19 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="document | async as t">
   <div class="row content2">
     <div class="col-sm-1">
     </div>
     <div class="col-sm-10 progress">
-      <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="70"
-           aria-valuemin="0" aria-valuemax="100" style="width:70%">
-        70%
+      <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+           aria-valuenow="151265"
+           aria-valuemin="0" aria-valuemax="5" [style.width]="getPercentage()">
+        {{totalXP%5+'/5'}}
       </div>
     </div>
     <div class="col-sm-1">
-      Level Up: 34
+      Level Up: {{level}}
     </div>
   </div>
 </div>
