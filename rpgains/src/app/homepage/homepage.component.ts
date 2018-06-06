@@ -7,7 +7,7 @@ import {User} from '../User';
 
 import * as firebase from 'firebase/app';
 import {AngularFireAuth} from 'angularfire2/auth';
-import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
+import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
 
 /*interface User {
   uid: string;
@@ -16,6 +16,7 @@ import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore
   displayName: string;
 }*/
 
+//
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -25,9 +26,7 @@ import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore
 
 export class HomepageComponent implements OnInit {
 
-
   user: Observable<User | null>;
-
   constructor(private afAuth: AngularFireAuth,
               private afs: AngularFirestore,
               private router: Router) {
@@ -43,7 +42,12 @@ export class HomepageComponent implements OnInit {
 
   googleLogin() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    return this.oAuthLogin(provider);
+    return this.newUser(provider);
+  }
+
+  egoogleLogin() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    return this.existingUser(provider);
   }
 
   logout() {
@@ -56,7 +60,19 @@ export class HomepageComponent implements OnInit {
     });
   }
 
-  private oAuthLogin(provider: firebase.auth.AuthProvider) {
+
+  signInWithGoogle() {
+    this.googleLogin()
+      .then(() => this.afterSignIn());
+  }
+
+  esignInWithGoogle() {
+    this.egoogleLogin()
+      .then(() => this.afterSignIn());
+  }
+
+
+  private newUser(provider: firebase.auth.AuthProvider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
         return this.updateUserData(credential.user);
@@ -64,13 +80,44 @@ export class HomepageComponent implements OnInit {
       .catch((error) => console.log(error));
   }
 
-  signInWithGoogle() {
-    this.googleLogin()
-      .then(() => this.afterSignIn());
+  private existingUser(provider: firebase.auth.AuthProvider) {
+    return this.afAuth.auth.signInWithPopup(provider)
+      .then((credential) => {
+        return this.eupdateUserData(credential.user);
+      })
+      .catch((error) => console.log(error));
   }
 
-  private updateUserData(user: User) {
+  private eupdateUserData(user: User) {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+    const data: User = {
+      uid: user.uid,
+      email: user.email || null,
+      displayName: user.displayName || 'nameless user',
+      photoURL: user.photoURL || 'https://goo.gl/Fz9nrQ',
+      xp: user.xp || user.xp,
+      eqArmor: user.eqArmor || user.eqArmor,
+      eqHelmet: user.eqHelmet || user.eqHelmet,
+      eqWeapon: user.eqWeapon || user.eqWeapon,
+      historyBench: user.historyBench || user.historyBench,
+      historyCurl: user.historyCurl || user.historyCurl,
+      historySquat: user.historySquat || user.historySquat,
+      historyWeight: user.historyWeight || user.historyWeight,
+      invArmor: user.invArmor || user.invArmor,
+      invHelm: user.invHelm || user.invHelm,
+      invWeapon: user.invWeapon || user.invWeapon ,
+      lastBench: user.lastBench || user.lastBench,
+      lastCurl: user.lastCurl || user.lastCurl,
+      lastSquat: user.lastSquat || user.lastSquat,
+      lastWeight: user.lastWeight || user.lastWeight,
+      tokens: user.tokens || user.tokens
+    };
+    localStorage.userid = user.uid;
+    return userRef.set(data);
+  }
+  private updateUserData(user) {
+
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const data: User = {
       uid: user.uid,
       email: user.email || null,
@@ -94,8 +141,9 @@ export class HomepageComponent implements OnInit {
       tokens: user.tokens || 0
     };
     localStorage.userid = user.uid;
-    return userRef.set(data);
+    return userRef.set(data, {merge: true});
   }
+
 
   private afterSignIn() {
     // Do after login stuff here, such router redirects, toast messages, etc.
