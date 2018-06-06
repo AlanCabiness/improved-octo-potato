@@ -3,7 +3,22 @@ var SCOPE = 'https://www.googleapis.com/auth/fitness.activity.read';
 function handleClientLoad() {
   // Load the API's client and auth2 modules.
   // Call the initClient function after the modules load.
-  gapi.load('client:auth2', initClient);
+  // gapi.load('client:auth2', initClient);
+  gapi.load('client:auth2', {
+    callback: function(){
+      initClient();
+    },
+    onerror: function() {
+      // Handle loading error.
+      alert('gapi.client failed to load!');
+    },
+    timeout: 5000, // 5 seconds.
+    ontimeout: function() {
+      // Handle timeout.
+      alert('gapi.client could not load in a timely manner!');
+    }
+
+  })
 }
 function initClient() {
   // Retrieve the discovery document for version 3 of Google Drive API.
@@ -21,8 +36,8 @@ function initClient() {
     // Listen for sign-in state changes.
     GoogleAuth.isSignedIn.listen(updateSigninStatus);
     // Handle initial sign-in state. (Determine if user is already signed in.)
-    var user = GoogleAuth.currentUser.get();
     setSigninStatus();
+    var user = GoogleAuth.currentUser.get();
     // Call handleAuthClick function when user clicks on
     //      "Sign In/Authorize" button.
     $('#sign-in-or-out-button').click(function() {
@@ -32,7 +47,7 @@ function initClient() {
       revokeAccess();
     });
     $('#api-call').click(function() {
-      apicall();
+      getLast24Hours();
     });
   });
 }
@@ -53,21 +68,21 @@ function setSigninStatus(isSignedIn) {
   var isAuthorized = user.hasGrantedScopes(SCOPE);
   if (isAuthorized) {
     $('#sign-in-or-out-button').html('Sign out');
-    $('#api-call').html('API Call');
+    $('#api-call').html('Get Step Data For Last 24 Hours');
     $('#revoke-access-button').css('display', 'inline-block');
     $('#auth-status').html('You are currently signed in and have granted ' +
       'access to this app.');
   } else {
     $('#sign-in-or-out-button').html('Sign In/Authorize');
     $('#revoke-access-button').css('display', 'none');
-    $('#auth-status').html('You have not autahorized this app or you are ' +
+    $('#auth-status').html('You have not authorized this app or you are ' +
       'signed out.');
   }
 }
 function updateSigninStatus(isSignedIn) {
   setSigninStatus();
 }
-function apicall() {
+function getLast24Hours() {
   var request = gapi.client.request({
     'method': 'POST',
     'path': 'https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate',
@@ -86,5 +101,10 @@ function apicall() {
     let newobj = getObject(response);
     document.getElementById("estimated-steps").innerHTML =
       "You have achieved approximately " +newobj+ " in the last 24 hours.";
-  });
+  },
+    function(reason) {
+      document.getElementById("estimated-steps").innerHTML =
+       "Looks like there isn't any step data to pull.";
+      return(reason);
+    });
 }

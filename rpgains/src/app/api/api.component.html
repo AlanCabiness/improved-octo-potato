@@ -31,12 +31,13 @@
 
 <h3>Google Fit</h3>
 <div id="auth-status" style="display: inline; padding-left: 25px"></div><hr>
+<div id="name" style="display:inline; padding-left: 25px"></div>
 <div>
   <button id="sign-in-or-out-button"
           style="margin-left: 25px" onclick="handleClientLoad(); handleAuthClick()">Sign In/Authorize</button>
   <button id="revoke-access-button"
-          style="display: inline-block; margin-left: 25px"onclick="revokeAccess()">Revoke access</button>
-  <button id="api-call"onclick="apicall()">get</button>
+          style="display: inline-block; margin-left: 25px"onclick="revokeAccess()">Revoke Access</button>
+  <button id="api-call"onclick="getLast24Hours()"></button>
 
   <h3 id="estimated-steps"></h3>
 </div>
