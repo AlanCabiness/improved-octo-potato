@@ -19,6 +19,8 @@ function handleClientLoad() {
     }
 
   })
+  var a = document.getElementById("sign-in-or-out-button");
+  a.style.display = "inline-block";
 }
 function initClient() {
   // Retrieve the discovery document for version 3 of Google Drive API.
@@ -50,11 +52,17 @@ function initClient() {
       getLast24Hours();
     });
   });
+  var a = document.getElementById("api-call");
+  var b = document.getElementById("revoke-access-button");
+  a.style.display = "inline-block";
+  b.style.display = "revoke-access-button";
+
 }
 function handleAuthClick() {
   if (GoogleAuth.isSignedIn.get()) {
     // User is authorized and has clicked 'Sign out' button.
     GoogleAuth.signOut();
+    myFunction();
   } else {
     // User is not signed in. Start Google auth flow.
     GoogleAuth.signIn();
@@ -107,4 +115,13 @@ function getLast24Hours() {
        "Looks like there isn't any step data to pull.";
       return(reason);
     });
+}
+
+function myFunction() {
+  var a = document.getElementById("get-started");
+  if (a.style.display === "none") {
+    a.style.display = "inline-block";
+  } else {
+    a.style.display = "none";
+  }
 }
