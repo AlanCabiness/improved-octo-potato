@@ -21,9 +21,9 @@ Now, with all your new loot, head on over to the customization page, and you can
 
 ![alt text](https://i.gyazo.com/d35b9a805436a53b0dc9faf7eb387c36.gif)
 
-At the core of the token system and the tracking functionality is the tracking page. Here you enter your measurements and they will be added to your profile.  There are 10 possible experience points to be gained here. The first 5 are gained by tracking your workout, as just going to the gym is half the battle. The other five points can be gained from decreasing your weight, increasing your bench, increasing your squat, increasing your curl, and eating less than 2000 calories. There is also a graph that will show your history in 5 different categories so you can view your trends. (WORK IN PROGRESS)
+At the core of the token system and the tracking functionality is the tracking page. Here you enter your measurements and they will be added to your profile.  There are 10 possible experience points to be gained here. The first 5 are gained by tracking your workout, as just going to the gym is half the battle. The other five points can be gained from decreasing your weight, increasing your bench, increasing your squat, increasing your curl, and eating less than 2000 calories. There is also a graph that will show your history in 5 different categories so you can view your trends.
 
-![alt text](https://i.imgur.com/mhIZjKq.png)
+![alt text](https://i.imgur.com/f208aNM.png)
 
 Now, if we navigate back to the dashboard, we can see that the selected weapons and armor are equipped and the recent tracking information is displayed. You will also see that you have leveled up and have made progress towards your next level up on the progress bar.
 
