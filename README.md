@@ -43,6 +43,18 @@ You will require node, npm, and @angular/cli.<br>
 <b>6.</b> You should have a fully functional RPGains application on your machine <br>
 
 
+<h2>Google Fit Dashboard</h2>
+Following are some screens shwoing the functionality of the Google Fit user dahsboard, where users can get they Google Fit step data in the RPGains application.
+
+![alt text](https://i.imgur.com/XowoBL9.png)
+
+![alt text](https://i.imgur.com/lUt1kB8.png)
+
+![alt text](https://i.imgur.com/28dqyqm.png)
+
+![alt text](https://i.imgur.com/0LUdUdH.png)
+
+![alt text](https://i.imgur.com/rtVTWRN.png)
 
 
 This project was created by Alan Cabiness, Giancarlo Cianelli, Julio Robert Giron, and Alejandro Vicuna.
