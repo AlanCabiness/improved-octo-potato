@@ -31,8 +31,9 @@ export class HomepageComponent implements OnInit {
   beforeLog;
   userInvitesCollection: AngularFirestoreCollection<User>;
   value: Observable<User[]>;
-  usersCollection:        AngularFirestoreCollection<User>;
+  usersCollection: AngularFirestoreCollection<User>;
   users: Observable<User[]>;
+  today;
 
   constructor(private afAuth: AngularFireAuth,
               private afs: AngularFirestore,
@@ -129,20 +130,24 @@ export class HomepageComponent implements OnInit {
       historyCurl: user.historyCurl || user.historyCurl,
       historySquat: user.historySquat || user.historySquat,
       historyWeight: user.historyWeight || user.historyWeight,
+      historyCalories: user.historyCalories || user.historyCalories,
       invArmor: user.invArmor || user.invArmor,
       invHelm: user.invHelm || user.invHelm,
-      invWeapon: user.invWeapon || user.invWeapon ,
+      invWeapon: user.invWeapon || user.invWeapon,
       lastBench: user.lastBench || user.lastBench,
       lastCurl: user.lastCurl || user.lastCurl,
       lastSquat: user.lastSquat || user.lastSquat,
       lastWeight: user.lastWeight || user.lastWeight,
+      lastCalories: user.lastCalories || user.lastCalories,
       tokens: user.tokens || user.tokens
     };
     localStorage.userid = user.uid;
     return userRef.set(data);
   }
-  private updateUserData(user) {
 
+  private updateUserData(user) {
+    const d = new Date();
+    this.today = ((d.getMonth() + 1) + '/') + d.getDate() + '/' + d.getFullYear();
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const data: User = {
       uid: user.uid,
@@ -153,19 +158,19 @@ export class HomepageComponent implements OnInit {
       eqArmor: user.eqArmor || '../../assets/armorGray.png',
       eqHelmet: user.eqHelmet || '../../assets/helmetGray.png',
       eqWeapon: user.eqWeapon || '../../assets/weaponGray.png',
-      historyBench: user.historyBench || {},
-      historyCurl: user.historyCurl || {},
-      historySquat: user.historySquat || {},
-      historyWeight: user.historyWeight || {},
-      historyCalories: user.historyCalories || {},
+      historyBench: {startDate: '0'},
+      historyCurl: {startDate: '0'},
+      historySquat: {startDate: '0'},
+      historyWeight: {startDate: '9999'},
+      historyCalories: {startDate: '2000'},
       invArmor: user.invArmor || ['../../assets/armorGray.png'],
       invHelm: user.invHelm || ['../../assets/helmetGray.png'],
       invWeapon: user.invWeapon || ['../../assets/weaponGray.png'],
       lastBench: user.lastBench || 0,
       lastCurl: user.lastCurl || 0,
       lastSquat: user.lastSquat || 0,
-      lastWeight: user.lastWeight || 0,
-      lastCalories: user.lastCalories || 0,
+      lastWeight: user.lastWeight || 9999,
+      lastCalories: user.lastCalories || 2000,
       tokens: user.tokens || 5
     };
     localStorage.userid = user.uid;
