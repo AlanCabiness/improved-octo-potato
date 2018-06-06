@@ -7,7 +7,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script async defer src="https://apis.google.com/js/api.js"></script>
-
 </head>
 <body>
 <nav class="navbar">
@@ -31,13 +30,13 @@
 
 <h3>Google Fit</h3>
 <div id="auth-status" style="display: inline; padding-left: 25px"></div><hr>
-<div id="name" style="display:inline; padding-left: 25px"></div>
 <div>
+  <button id="get-started" style="display: inline-block; margin-left: 25px; text-align: center;" onclick="handleClientLoad(); myFunction()">Get Started</button>
   <button id="sign-in-or-out-button"
-          style="margin-left: 25px" onclick="handleClientLoad(); handleAuthClick()">Sign In/Authorize</button>
+          style="display: none; margin-left: 25px" onclick="handleAuthClick()">Sign In/Authorize</button>
   <button id="revoke-access-button"
-          style="display: inline-block; margin-left: 25px"onclick="revokeAccess()">Revoke Access</button>
-  <button id="api-call"onclick="getLast24Hours()"></button>
+          style="display: none; margin-left: 25px"onclick="revokeAccess()">Revoke Access</button>
+  <button id="api-call" style="display: none; margin-left: 25px" onclick="getLast24Hours()">Get Step Data From Last 24 Hours</button>
 
   <h3 id="estimated-steps"></h3>
 </div>
